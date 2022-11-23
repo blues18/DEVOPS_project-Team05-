@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login JSP</title>
+<%@include file="includes/header.jsp" %>
 </head>
 <body>
 	<h1>Login credential</h1>

@@ -39,20 +39,27 @@ public class loginServlet extends HttpServlet {
 		String username = request.getParameter("userName");
 		String password = request.getParameter("passWord");
 		String storedUsername = "blue";
-		String StoredPassWord = "Ezeikel888";
+		String StoredPassword = "ezeikel";
 		
-		if(username == storedUsername && password == StoredPassWord){
+		if(username == storedUsername){
+			System.out.println("Okay");
 			PrintWriter writer = response.getWriter();
-			writer.println("<h1>You have Successfully login </h1>");
+			writer.println("<h1> You have Successfully login </h1>");
 			writer.close();
-		}else {
+			doGet(request, response);
+		}else{
+			System.out.println("fail");
 			PrintWriter writer = response.getWriter();
-			writer.println("<h1> Get OUT </h1>");
+			writer.println(
+					"<h1> Get OUT 1</h1> "
+					+"<div>" + username + " " + password + "</div>" 
+					+"<div>" + storedUsername + " " + StoredPassword + "</div>" 
+					);
 			writer.close();
+			doGet(request, response);
 		};
 		
 		
-		doGet(request, response);
 	}
 
 }
