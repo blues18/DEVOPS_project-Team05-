@@ -8,6 +8,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.awt.Image;
+import java.sql.Blob;
+import javax.imageio.ImageIO;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.awt.image.BufferedImage;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -90,6 +98,11 @@ public class ProductServlet extends HttpServlet {
 				int product_price = rs.getInt("product_price");
 				String product_discription = rs.getString("product_discription");
 				int product_stocks = rs.getInt("product_stocks");
+				Blob blob = rs.getBlob("product_images");
+				byte [] bytes = blob.getBytes(11, (int)blob.length());
+				ByteArrayInputStream image = new ByteArrayInputStream(bytes);
+				BufferedImage newImage = ImageIO.read(image);
+				boolean product_image = ImageIO.write(newImage, "jpg", new File("outputImage.jpg"));					
 				products.add(new products_model(product_name, product_type, product_brand, 
 						product_price,product_discription,product_stocks));
 				System.out.println("adding to list");
