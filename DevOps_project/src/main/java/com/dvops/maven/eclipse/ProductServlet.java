@@ -90,8 +90,9 @@ public class ProductServlet extends HttpServlet {
 				int product_price = rs.getInt("product_price");
 				String product_discription = rs.getString("product_discription");
 				int product_stocks = rs.getInt("product_stocks");
+				String product_images = rs.getString("product_images");
 				products.add(new products_model(product_name, product_type, product_brand, 
-						product_price,product_discription,product_stocks));
+						product_price,product_discription,product_stocks,product_images));
 				System.out.println("adding to list");
 			}
 		} catch (SQLException e) {

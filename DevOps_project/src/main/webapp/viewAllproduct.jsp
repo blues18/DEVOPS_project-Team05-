@@ -27,27 +27,24 @@
 	<div class="row">
 		<c:forEach var="product" items="${listProduct}">
 			<div class="card" style="width: 18rem;">
-				<img class="card-img-top" src="..." alt="Card image cap">
+				<div class="imageContainer">
+					<img class="card-img-top" src="${product.product_images}" alt="images/laptop.JPG">
+				</div>
 				<div class="card-body">
 					<h5 class="card-title">
 						<c:out value="${product.product_name}" />
 					</h5>
 					<p class="card-text">
-						<c:out value="${product.product_type}" />
-					</p>
-					<p class="card-text">
 						<c:out value="${product.product_brand}" />
 					</p>
-					<p class="card-text">
-						<c:out value="${product.product_price}" />
-					</p>
+					<h5><c:out value="${product.product_price}" /></h5>
 					<p class="card-text">
 						<c:out value="${product.product_discription}" />
 					</p>
 					<p class="card-text">
 						<c:out value="${product.product_stocks}" />
 					</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+					<a href="#" class="btn btn-primary">Add to Cart</a>
 				</div>
 			</div>
 		</c:forEach>
