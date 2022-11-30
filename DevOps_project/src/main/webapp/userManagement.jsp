@@ -5,10 +5,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<link rel="stylesheet" 
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
 crossorigin="anonymous">
 
 </head>
@@ -20,12 +20,10 @@ crossorigin="anonymous">
 				<hr>
 				<div class="container text-left">
 				
-						<!-- Add new user button redirects to the register.jsp page -->
-						<a href="<%=request.getContextPath()%>/register_page.jsp" class="btn btnsuccess">Add New User</a>
+						<a href="<%=request.getContextPath()%>/register_page.jsp" class="btn btn success">Add New User</a>
 				</div>
 				<br>
 				
-				<!-- Create a table to list out all current users information -->
 				<table class="table">
 						<thead>
 								<tr>
@@ -37,14 +35,12 @@ crossorigin="anonymous">
 								</tr>
 						</thead>
 						
-						<!-- Pass in the list of users receive via the Servlet's response to a loop -->
 						<tbody>
 								<c:forEach var="user" items="${listUsers}">
 								
-										<!-- For each user in the database, display their information accordingly -->
 										<tr>
 												<td>
-														<c:out value="${user.username}" />
+														<c:out value="${user.name}" />
 												</td>
 												<td>
 														<c:out value="${user.password}" />
@@ -56,10 +52,9 @@ crossorigin="anonymous">
 														<c:out value="${user.races}" />
 												</td>
 												
-												<!-- For each user in the database, Edit/Delete buttons which invokes the edit/delete functions -->
 												<td>
-														<a href="edit?username=<c:out value='${user.username}' />">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; 
-														<a href="delete?username=<c:out value='${user.username}' />">Delete</a>
+														<a href="edit?name=<c:out value='${user.name}' />">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+														<a href="delete?name=<c:out value='${user.name}' />">Delete</a>
 												</td>
 										</tr>
 								</c:forEach>

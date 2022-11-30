@@ -51,7 +51,7 @@ public class registerServlet extends HttpServlet {
 			Connection con = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/userdetails_storage","root","Ezeikel888="
 					);
-			PreparedStatement ps = con.prepareStatement("insert into userdetails values(?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("insert into userdetails_storage values(?,?,?,?)");
 			
 			ps.setString(1, username);
 			ps.setString(2, password);
