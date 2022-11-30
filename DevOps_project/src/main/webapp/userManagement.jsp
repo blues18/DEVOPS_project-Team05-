@@ -5,10 +5,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>	
-<link rel="stylesheet" 
-href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 crossorigin="anonymous">
 
 </head>
@@ -29,7 +29,7 @@ crossorigin="anonymous">
 				<table class="table">
 						<thead>
 								<tr>
-										<th>Name</th>
+										<th>UserName</th>
 										<th>Password</th>
 										<th>Email</th>
 										<th>Races</th>
@@ -44,7 +44,7 @@ crossorigin="anonymous">
 										<!-- For each user in the database, display their information accordingly -->
 										<tr>
 												<td>
-														<c:out value="${user.name}" />
+														<c:out value="${user.username}" />
 												</td>
 												<td>
 														<c:out value="${user.password}" />
@@ -58,8 +58,8 @@ crossorigin="anonymous">
 												
 												<!-- For each user in the database, Edit/Delete buttons which invokes the edit/delete functions -->
 												<td>
-														<a href="edit?name=<c:out value='${user.name}' />">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; 
-														<a href="delete?name=<c:out value='${user.name}' />">Delete</a>
+														<a href="edit?username=<c:out value='${user.username}' />">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+														<a href="delete?username=<c:out value='${user.username}' />">Delete</a>
 												</td>
 										</tr>
 								</c:forEach>

@@ -37,11 +37,11 @@ public class UserServlet extends HttpServlet {
     private String jdbcUsername = "root";
     private String jdbcPassword = "password";
     
-	private static final String INSERT_USERS_SQL = "INSERT INTO UserDetails" + " (name, password, email, races) VALUES " +" (?, ?, ?);";
-	private static final String SELECT_USER_BY_ID = "select name,password,email,races from UserDetails where name =?";
+	private static final String INSERT_USERS_SQL = "INSERT INTO UserDetails" + " (username, password, email, races) VALUES " +" (?, ?, ?);";
+	private static final String SELECT_USER_BY_ID = "select username,password,email,races from UserDetails where username =?";
 	private static final String SELECT_ALL_USERS = "select * from UserDetails ";
-	private static final String DELETE_USERS_SQL = "delete from UserDetails where name = ?;";
-	private static final String UPDATE_USERS_SQL = "update UserDetails set name = ?,password= ?,email =?,races =? where name = ?;";
+	private static final String DELETE_USERS_SQL = "delete from UserDetails where username = ?;";
+	private static final String UPDATE_USERS_SQL = "update UserDetails set username = ?,password= ?,email =?,races =? where username = ?;";
 	
 	protected Connection getConnection() {
  		 Connection connection = null;
@@ -67,11 +67,11 @@ public class UserServlet extends HttpServlet {
 		  				  	ResultSet rs = preparedStatement.executeQuery();
 		  				  	
 		  				  while (rs.next()) {
-	  						  String name = rs.getString("name");
+	  						  String username = rs.getString("username");
 	  						  String password = rs.getString("password");
 	  						  String email = rs.getString("email");
 	  						  String races = rs.getString("races");
-	  						  users.add(new User(name, password, email, races));
+	  						  users.add(new User(username, password, email, races));
 	  						  
 		  				}
 	  			  } catch (SQLException e) {
