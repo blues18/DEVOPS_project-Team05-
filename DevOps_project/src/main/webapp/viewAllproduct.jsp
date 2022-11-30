@@ -28,7 +28,7 @@
 		<c:forEach var="product" items="${listProduct}">
 			<div class="card" style="width: 18rem;">
 				<div class="imageContainer">
-					<img class="card-img-top" src="${product.product_images}" alt="images/laptop.JPG">
+					<img class="card-img-top" src="" alt="images/laptop.JPG">
 				</div>
 				<div class="card-body">
 					<h5 class="card-title">
@@ -43,8 +43,8 @@
 					</p>
 					<p class="card-text">
 						<c:out value="${product.product_stocks}" />
-					</p>
-					<a href="#" class="btn btn-primary">Add to Cart</a>
+					</p>					
+					<a href="get_name?product_name=<c:out value='${product.product_name}'/>" class="btn btn-primary">See More</a>
 				</div>
 			</div>
 		</c:forEach>
