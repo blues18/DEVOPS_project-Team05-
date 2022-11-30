@@ -12,10 +12,6 @@
 </head>
 <body style='background-color: lightblue;'>
 <h1> Welcome to TechWare! </h1>
-<form action="testingjava" method="post">
-	Enter your Name: <input type="text" name="yourName" size="20">
-	<input type="submit" value="submit">
-</form>
 <br>
 <%@include file="includes/table.jsp" %>
 </body>
