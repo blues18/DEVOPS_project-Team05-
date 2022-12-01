@@ -6,17 +6,17 @@ public class products_model {
 	protected String product_type;
 	protected String product_brand;
 	protected int product_price;
-	protected String product_discription;
+	protected String product_description;
 	protected int product_stocks;
 	//protected String product_images;
 	
 	public products_model(String product_name, String product_type, String product_brand, int product_price, 
-			String product_discription, int product_stocks) {
+			String product_description, int product_stocks) {
 		this.product_name = product_name;
 		this.product_type = product_type;
 		this.product_brand = product_brand;
 		this.product_price = product_price;
-		this.product_discription = product_discription;
+		this.product_description = product_description;
 		this.product_stocks = product_stocks;
 		//this.product_images = product_images;
 	}
@@ -45,11 +45,11 @@ public class products_model {
 	public void setProduct_price(int product_price) {
 		this.product_price = product_price;
 	}
-	public String getProduct_discription() {
-		return product_discription;
+	public String getProduct_description() {
+		return product_description;
 	}
-	public void setProduct_discription(String product_discription) {
-		this.product_discription = product_discription;
+	public void setProduct_discription(String product_description) {
+		this.product_description = product_description;
 	}
 	public int getProduct_stocks() {
 		return product_stocks;
