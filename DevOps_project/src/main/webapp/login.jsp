@@ -17,7 +17,7 @@
         <div class="card-text">  
             <form action="LoginServlet" method="post">  
                 <div class="form-group">  
-                    <label> Enter UserName </label>  
+                    <label> Enter Username </label>  
                     <input type="text" class="form-control form-control-sm" name="userName">  
                 </div>  
                 <div class="form-group">  
