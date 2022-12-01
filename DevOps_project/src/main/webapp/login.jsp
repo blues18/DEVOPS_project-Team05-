@@ -9,7 +9,8 @@
 <link href="css_folder/login.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
-<body style='background-color: lightblue;'>  
+<body>
+<section class="h-100 h-custom" style="background-color: #00A6CF;">
   <div class="global-container">  
     <div class="card login-form">  
     <div class="card-body">  
@@ -33,6 +34,7 @@
         </div>  
     </div>
 </div>  
-</div>  
+</div>
+</section>
 </body> 
 </html>
