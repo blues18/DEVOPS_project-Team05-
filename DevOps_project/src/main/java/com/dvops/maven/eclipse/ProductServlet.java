@@ -98,11 +98,11 @@ public class ProductServlet extends HttpServlet {
 				String product_type = rs.getString("product_type");
 				String product_brand = rs.getString("product_brand");
 				int product_price = rs.getInt("product_price");
-				String product_discription = rs.getString("product_discription");
+				String product_description = rs.getString("product_description");
 				int product_stocks = rs.getInt("product_stocks");
 				//String product_images = rs.getString("product_images");
 				products.add(new products_model(product_name, product_type, product_brand, product_price,
-						product_discription, product_stocks));
+						product_description, product_stocks));
 				System.out.println("adding to list");
 			}
 		} catch (SQLException e) {
@@ -135,11 +135,11 @@ public class ProductServlet extends HttpServlet {
 				String product_type = rs.getString("product_type");
 				String product_brand = rs.getString("product_brand");
 				int product_price = rs.getInt("product_price");
-				String product_discription = rs.getString("product_discription");
+				String product_description = rs.getString("product_description");
 				int product_stocks = rs.getInt("product_stocks");
 				//String product_images = rs.getString("product_images");
 				existingProducts = new products_model(product_name, product_type, product_brand, product_price,
-						product_discription, product_stocks);
+						product_description, product_stocks);
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());

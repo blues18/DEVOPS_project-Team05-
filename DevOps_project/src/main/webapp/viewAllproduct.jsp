@@ -51,7 +51,7 @@
 					</h5>
 					<p class="card-text">
 						"
-						<c:out value="${product.product_discription}" />
+						<c:out value="${product.product_description}" />
 						"
 					</p>
 					<row> 

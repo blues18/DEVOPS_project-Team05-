@@ -28,8 +28,8 @@
 				</fieldset>
 				<fieldset class="form-group">
 					<label>Description</label> 
-					<input type="text" value="<c:out value='${Product.product_discription}' />" 
-					class="form-control" name="product_discription">
+					<input type="text" value="<c:out value='${Product.product_description}' />" 
+					class="form-control" name="product_description">
 				</fieldset>
 				<fieldset class="form-group">
 					<label> Brand</label> 
