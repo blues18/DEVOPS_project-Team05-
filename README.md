@@ -1,5 +1,5 @@
 # DEVOPS_project-Team05-
-E commercial Gaming Devices Application
+Ecommercial Gaming Devices Web Application
 
 # Project Description 
 This is a Simple Web Apllication Project For Devops which we are doing a Ecommercial gaming store that sell gamming devices such as keyboard and mouse along with user features such as editing profile and reviews comments on products, Our technology we are currently using are Ecplise IDE for java-based developement platforms as well as servlets technology for creating web application under java using request and response model. Jsp with static and dynamice for displaying much similar to html expect without dynamic features and backend database server using phpmyadmin to store data values.
@@ -11,7 +11,7 @@ Our Porject data items such as product items is currently stored in backend serv
 (this is how it would look like when is retriving data from backend)
 
 # Credits
-Collaborators 
+Collaborators: 
 Derrick, Wei jun, Ryan and Kevin
 
 2/12/2022
