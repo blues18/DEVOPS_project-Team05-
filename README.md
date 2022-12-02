@@ -14,5 +14,5 @@ Our Porject data items such as product items is currently stored in backend serv
 Collaborators: 
 Derrick, Wei jun, Ryan and Kevin
 
-2/12/2022
+Created on: 2/12/2022
 
