@@ -10,12 +10,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <%@include file="includes/header.jsp"%>
 </head>
-<body>
-<h1> Ecom project Team 5 </h1>
-<form action="testingjava" method="post">
-	Enter your Name: <input type="text" name="yourName" size="20">
-	<input type="submit" value="Call Servlet">
-</form>
-<%@include file="includes/footer.jsp" %>
+<body style='background-color: lightblue;'>
+<h1> Welcome to TechWare! </h1>
+<br>
+<%@include file="includes/table.jsp" %>
 </body>
 </html>

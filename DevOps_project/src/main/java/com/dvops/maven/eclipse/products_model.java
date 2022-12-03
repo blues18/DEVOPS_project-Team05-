@@ -8,6 +8,7 @@ public class products_model {
 	protected int product_price;
 	protected String product_discription;
 	protected int product_stocks;
+	//protected String product_images;
 	
 	public products_model(String product_name, String product_type, String product_brand, int product_price, 
 			String product_discription, int product_stocks) {
@@ -17,6 +18,7 @@ public class products_model {
 		this.product_price = product_price;
 		this.product_discription = product_discription;
 		this.product_stocks = product_stocks;
+		//this.product_images = product_images;
 	}
 	
 	public String getProduct_name() {
@@ -55,4 +57,12 @@ public class products_model {
 	public void setProduct_stocks(int product_stocks) {
 		this.product_stocks = product_stocks;
 	}
+	/*
+	public String getproduct_images() {
+		return product_images;
+	}
+	public void setproduct_images(String product_images) {
+		this.product_images = product_images;
+	}
+	*/
 }
