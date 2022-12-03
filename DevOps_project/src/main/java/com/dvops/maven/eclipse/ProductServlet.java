@@ -37,7 +37,7 @@ public class ProductServlet extends HttpServlet {
 	private String jdbcPassword = "Ezeikel888=";
 
 	private static final String select_product_by_name = "select product_name, product_type, product_brand, "
-			+ "product_price,product_discription,product_stocks from product_Table where product_name = ?";
+			+ "product_price,product_description,product_stocks from product_Table where product_name = ?";
 
 	private static final String select_all_product = "SELECT * FROM product_table ";
 

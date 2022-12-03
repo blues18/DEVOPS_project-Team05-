@@ -48,7 +48,7 @@ public class products_model {
 	public String getProduct_description() {
 		return product_description;
 	}
-	public void setProduct_discription(String product_description) {
+	public void setProduct_description(String product_description) {
 		this.product_description = product_description;
 	}
 	public int getProduct_stocks() {
