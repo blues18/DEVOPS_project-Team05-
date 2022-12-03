@@ -16,6 +16,7 @@
 		<url-pattern>/UserServlet/edit</url-pattern>
 		<url-pattern>/UserServlet/update</url-pattern>
 		<url-pattern>/UserServlet/delete</url-pattern>
+		<url-pattern>/UserServlet/review</url-pattern>
 	</servlet-mapping>
 	
 </web-app>
