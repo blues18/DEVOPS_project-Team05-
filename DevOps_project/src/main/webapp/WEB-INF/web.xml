@@ -12,5 +12,6 @@
 		<servlet-name>ProductServlet</servlet-name>
 		<url-pattern>/ProductServlet/listDisplay</url-pattern>
 		<url-pattern>/ProductServlet/get_name</url-pattern>
+		<url-pattern>/ProductServlet/review</url-pattern>
 	</servlet-mapping>
 </web-app>
