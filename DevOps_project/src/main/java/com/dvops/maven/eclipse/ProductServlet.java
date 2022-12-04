@@ -106,7 +106,7 @@ public class ProductServlet extends HttpServlet {
 				System.out.println("adding to list");
 			}
 		} catch (SQLException e) {
-
+			System.out.println("fail at listProduct");
 			System.out.println(e.getMessage());
 		}
 

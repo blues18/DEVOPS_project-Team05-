@@ -20,21 +20,25 @@
 					<label>Name</label> 
 					<input type="text" value="${Product.product_name}" 
 					class="form-control" name="product_name" readonly>
+          
 				</fieldset>
 				<fieldset class="form-group">
 					<label>Prices</label> 
 					<input type="text" value="${Product.product_price}" 
 					class="form-control" name="product_price"readonly>
+          
 				</fieldset>
 				<fieldset class="form-group">
 					<label>Description</label> 
 					<input type="text" value="${Product.product_description}" 
 					class="form-control" name="product_description"readonly>
+
 				</fieldset>
 				<fieldset class="form-group">
 					<label> Brand</label> 
 					<input type="text" value="${Product.product_brand}" 
 					class="form-control" name="product_brand"readonly>
+          
 				</fieldset>
 				<button type="submit" class="btn btn-success">Add to Cart</button>
 				</form>
