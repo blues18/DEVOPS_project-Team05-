@@ -11,8 +11,6 @@
 <%@include file="includes/header.jsp"%>
 </head>
 <body style='background-color: lightblue;'>
-<h1> Welcome to TechWare! </h1>
-<br>
 <%@include file="includes/table.jsp" %>
 </body>
 </html>
