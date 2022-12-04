@@ -6,49 +6,11 @@
 <meta charset="ISO-8859-1">
 <title>Login JSP</title>
 <%@include file="includes/header.jsp" %>
+<link href="css_folder/login.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
-<style>  
-html {   
-    height: 100%;   
-}  
-body {   
-    height: 100%;   
-}  
-.global-container {  
-    height: 100%;  
-    display: flex;  
-    align-items: center;  
-    justify-content: center;  
-    background-color: #f5f5f5;  
-}  
-form {  
-    padding-top: 10px;  
-    font-size: 14px;  
-    margin-top: 30px;  
-}  
-.card-title {   
-font-weight: 300;  
- }  
-.btn {  
-    font-size: 14px;  
-    margin-top: 20px;  
-}  
-.login-form {   
-    width: 330px;  
-    margin: 20px;  
-}  
-.sign-up {  
-    text-align: center;  
-    padding: 20px 0 0;  
-}  
-.alert {  
-    margin-bottom: -30px;  
-    font-size: 13px;  
-    margin-top: 20px;  
-}  
-</style>  
-<body style='background-color: lightblue;'>  
+<body>
+<section class="h-100 h-custom" style="background-color: #00A6CF;">
   <div class="global-container">  
     <div class="card login-form">  
     <div class="card-body">  
@@ -56,7 +18,7 @@ font-weight: 300;
         <div class="card-text">  
             <form action="loginServlet" method="post">  
                 <div class="form-group">  
-                    <label> Enter UserName </label>  
+                    <label> Enter Username </label>  
                     <input type="text" class="form-control form-control-sm" name="userName">  
                 </div>  
                 <div class="form-group">  
@@ -72,6 +34,7 @@ font-weight: 300;
         </div>  
     </div>
 </div>  
-</div>  
+</div>
+</section>
 </body> 
 </html>
