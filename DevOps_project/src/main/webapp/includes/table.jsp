@@ -5,6 +5,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <meta charset="utf-8">
+<link rel="stylesheet">
+
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -13,32 +15,13 @@
 </style>
 </head>
 <body>
-	<section class="gallery min-vh-100">
-		<div class="container-lg">
-			<div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
-				<div class="col">
-					<img src="images/mouse3.JPG" class="gallery-item" alt="gallery">
-				</div>
-				<div class="col">
-					<img src="images/mouse2.JPG" class="gallery-item" alt="gallery">
-				</div>
-				<div class="col">
-					<img src="images/mouse.JPG" class="gallery-item" alt="gallery">
-				</div>
-				<div class="col">
-					<img src="images/pc.JPG" class="gallery-item" alt="gallery">
-				</div>
-				<div class="col">
-					<img src="images/pc1.JPG" class="gallery-item" alt="gallery">
-				</div>
-				<div class="col">
-					<img src="images/prism.JPG" class="gallery-item" alt="gallery">
-				</div>
-			</div>
-		</div>
-	</section>
-	<br>
-	<br>
-	<br>
+<div class ="image">
+<br><br>
+<h1>
+Welcome to E-shop!</h1>
+<br><br><br><br><br>
+<h2><a class="nav-link" href="<%=request.getContextPath()%>/ProductServlet/listDisplay">Click here to view products</a></h2>
+</div>
+
 </body>
 </html>
