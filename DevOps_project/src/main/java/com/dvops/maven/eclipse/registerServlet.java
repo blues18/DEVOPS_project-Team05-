@@ -41,10 +41,10 @@ public class registerServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		String username = request.getParameter("userName");
+		String username = request.getParameter("username");
 		String password = request.getParameter("passWord");
 		String email = request.getParameter("email");
-		String races = request.getParameter("races");
+		String race = request.getParameter("race");
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -56,7 +56,7 @@ public class registerServlet extends HttpServlet {
 			ps.setString(1, username);
 			ps.setString(2, password);
 			ps.setString(3, email);
-			ps.setString(4, races);
+			ps.setString(4, race);
 			
 			int i = ps.executeUpdate();
 			

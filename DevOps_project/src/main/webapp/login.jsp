@@ -16,7 +16,7 @@
     <div class="card-body">  
         <h3 class="card-title text-center"> Login Credentials </h3>  
         <div class="card-text">  
-            <form action="LoginServlet" method="post">  
+            <form action="loginServlet" method="post">  
                 <div class="form-group">  
                     <label> Enter Username </label>  
                     <input type="text" class="form-control form-control-sm" name="userName">  
