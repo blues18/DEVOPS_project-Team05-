@@ -58,8 +58,8 @@ value='${user.password}' />" class="form-control" name="password">
 value='${user.email}' />" class="form-control" name="email">
 </fieldset>
 <fieldset class="form-group">
-<label> Language</label> <input type="text" value="<c:out
-value='${user.language}' />" class="form-control" name="language">
+<label> race</label> <input type="text" value="<c:out
+value='${user.race}' />" class="form-control" name="race>
 </fieldset>
 <button type="submit" class="btn btn-success">Save</button>
 </form>

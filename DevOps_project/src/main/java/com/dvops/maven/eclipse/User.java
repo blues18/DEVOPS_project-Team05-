@@ -2,12 +2,12 @@ package com.dvops.maven.eclipse;
 
 public class User {
 	protected String name;
-	public User (String name, String password, String email, String language) {
+	public User (String name, String password, String email, String race) {
 	super();	
 	this.name = name;
 	this.password = password;
 	this.email = email;
-	this.language = language;
+	this.race = race;
 	}
 	
 	public String getName() {
@@ -28,14 +28,14 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getLanguage() {
-		return language;
+	public String getRace() {
+		return race;
 	}
-	public void setLanguage(String language) {
-		this.language = language;
+	public void setRace(String race) {
+		this.race = race;
 	}
 	protected String password;
 	protected String email;
-	protected String language;
+	protected String race;
 
 }

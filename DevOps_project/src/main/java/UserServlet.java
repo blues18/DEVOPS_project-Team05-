@@ -34,7 +34,7 @@ public class UserServlet extends HttpServlet {
     	
     	
     	private static final String INSERT_USERS_SQL = "INSERT INTO UserDetails" + "(username, password, email, race) VALUES " + " (?, ?, ?);";
-    			private static final String SELECT_USER_BY_ID = "select name,password,email,language from UserDetails where name =?";
+    			private static final String SELECT_USER_BY_ID = "select name,password,email,race from UserDetails where name =?";
     			private static final String SELECT_ALL_USERS = "select * from UserDetails ";
     			private static final String DELETE_USERS_SQL = "delete from UserDetails where name = ?;";
     			private static final String UPDATE_USERS_SQL = "update UserDetails set username = ?,password= ?, email =?,races =? where name = ?;";
@@ -61,8 +61,8 @@ public class UserServlet extends HttpServlet {
     					String name = rs.getString("username");
     					String password = rs.getString("password");
     					String email = rs.getString("email");
-    					String language = rs.getString("race");
-    					users.add(new User(name, password, email, language));
+    					String race = rs.getString("race");
+    					users.add(new User(name, password, email, race));
     					}
     					} catch (SQLException e) {
     					System.out.println(e.getMessage());
@@ -116,8 +116,8 @@ public class UserServlet extends HttpServlet {
 							name = rs.getString("name");
 							String password = rs.getString("password");
 							String email = rs.getString("email");
-							String language = rs.getString("language");
-							existingUser = new User(name, password, email, language);
+							String race = rs.getString("race");
+							existingUser = new User(name, password, email, race);
 							}
 							} catch (SQLException e) {
 							System.out.println(e.getMessage());
@@ -132,14 +132,14 @@ public class UserServlet extends HttpServlet {
 			String name = request.getParameter("name");
 			String password = request.getParameter("password");
 			String email = request.getParameter("email");
-			String language = request.getParameter("language");
+			String race = request.getParameter("race");
 			
 			try (Connection connection = getConnection(); PreparedStatement statement =
 			connection.prepareStatement(UPDATE_USERS_SQL);) {
 			statement.setString(1, name);
 			statement.setString(2, password);
 			statement.setString(3, email);
-			statement.setString(4, language);
+			statement.setString(4, race);
 			statement.setString(5, oriName);
 			int i = statement.executeUpdate();
 			}

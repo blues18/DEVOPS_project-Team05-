@@ -38,7 +38,7 @@
   </div>
   <div>
   <label for="races">Race</label>
-  <select name="races">
+  <select name="race">
   	<option value="chinese">Chinese</option>
   	<option value="Malay">Malay</option>
   	<option value="Indian">Indian</option>
