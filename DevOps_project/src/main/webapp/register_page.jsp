@@ -48,22 +48,18 @@ height: 100vh !important;
                 <label class="form-label" for="form3Example1q">Email</label>
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
-              
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-group">
                     <input type="text" class="form-control" name="userName"/>
                     <label for="exampleInputUsername" class="form-label">Username</label>
                   </div>
-
                 </div>
                   <div class="form-group">
                     <input type="password" class="form-control" name="passWord" />
                     <label class="form-label" for="exampleInputPassword1">Password</label>
                   </div>
               </div>
-
-
 				<div class="row">
                 <div class="col-12">
                   <select class="select form-control-lg" name="race">
