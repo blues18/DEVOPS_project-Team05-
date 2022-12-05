@@ -1,20 +1,20 @@
 package com.dvops.maven.eclipse;
 
 public class User {
-	protected String name;
-	public User (String name, String password, String email, String language) {
-	super();	
-	this.name = name;
-	this.password = password;
-	this.email = email;
-	this.language = language;
+	
+	public User(String username, String password, String email, String races) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.races = races;
 	}
 	
 	public String getName() {
-		return name;
+		return username;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String username) {
+		this.username = username;
 	}
 	public String getPassword() {
 		return password;
@@ -28,14 +28,17 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getLanguage() {
-		return language;
+  
+	public String getRaces() {
+		return races;
 	}
-	public void setLanguage(String language) {
-		this.language = language;
+	public void setRaces(String races) {
+		this.races = races;
 	}
+	
+	protected String username;
 	protected String password;
 	protected String email;
-	protected String language;
+	protected String races;
 
 }
