@@ -44,7 +44,7 @@ public class registerServlet extends HttpServlet {
 		String username = request.getParameter("userName");
 		String password = request.getParameter("passWord");
 		String email = request.getParameter("email");
-		String race = request.getParameter("race");
+		String races = request.getParameter("races");
 		
 		
 		try {
@@ -57,7 +57,7 @@ public class registerServlet extends HttpServlet {
 			ps.setString(1, username);
 			ps.setString(2, password);
 			ps.setString(3, email);
-			ps.setString(4, race);
+			ps.setString(4, races);
 			
 			int i = ps.executeUpdate();
 			

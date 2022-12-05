@@ -59,7 +59,7 @@ value='${user.email}' />" class="form-control" name="email">
 </fieldset>
 <fieldset class="form-group">
 <label> race</label> <input type="text" value="<c:out
-value='${user.race}' />" class="form-control" name="race>
+value='${user.races}' />" class="form-control" name="races>
 </fieldset>
 <button type="submit" class="btn btn-success">Save</button>
 </form>

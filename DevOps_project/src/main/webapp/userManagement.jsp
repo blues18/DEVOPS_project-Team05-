@@ -29,7 +29,7 @@ success">Add New User</a>
 <th>Name</th>
 <th>Password</th>
 <th>Email</th>
-<th>Race</th>
+<th>Races</th>
 <th>Actions</th>
 </tr>
 </thead>
@@ -50,7 +50,7 @@ information accordingly -->
 <c:out value="${user.email}" />
 </td>
 <td>
-<c:out value="${user.race}" />
+<c:out value="${user.races}" />
 </td>
 <!-- For each user in the database, Edit/Delete
 buttons which invokes the edit/delete functions -->
