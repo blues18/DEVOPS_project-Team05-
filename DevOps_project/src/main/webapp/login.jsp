@@ -56,7 +56,7 @@ font-weight: 300;
         <div class="card-text">  
             <form action="loginServlet" method="post">  
                 <div class="form-group">  
-                    <label> Enter UserName </label>  
+                    <label> Enter Username </label>  
                     <input type="text" class="form-control form-control-sm" name="userName">  
                 </div>  
                 <div class="form-group">  
@@ -66,7 +66,7 @@ font-weight: 300;
                 </div>  
                 <button type="submit" class="btn btn-primary btn-block" value="submit values"> Sign in </button>  
                 <div class="sign-up">  
-                    Don't have an account? <a href="#"> Create One </a>  
+                    Don't have an account? <a href="<%=request.getContextPath()%>/register_page.jsp"> Create One </a>
                 </div>  
             </form>  
         </div>  
