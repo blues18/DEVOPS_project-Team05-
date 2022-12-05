@@ -61,6 +61,5 @@ crossorigin="anonymous">
 				</table>
 		</div>
 </div>
-
 </body>
 </html>
