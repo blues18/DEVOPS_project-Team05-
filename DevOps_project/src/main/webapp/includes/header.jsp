@@ -19,11 +19,22 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
 	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 	crossorigin="anonymous"></script>
-<title>testing</title>
+<title>E-Shop</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Navbar</a>
+	<img
+          src="https://cdn-icons-png.flaticon.com/512/2331/2331858.png"
+          height="40"
+          alt="E-Shop Logo"
+          loading="lazy"/>
+	<img
+          src="https://cdn-icons-png.flaticon.com/512/7312/7312167.png"
+          height="25"
+          alt="E-Shop Logo"
+          loading="lazy"/>
+		<a class="navbar-brand" href="#">-Shop</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
