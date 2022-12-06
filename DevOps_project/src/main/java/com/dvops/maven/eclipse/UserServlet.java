@@ -142,6 +142,8 @@ public class UserServlet extends HttpServlet {
 	 String password = request.getParameter("password");
 	 String email = request.getParameter("email");
 	 String races = request.getParameter("races");
+	 System.out.println(username);
+	 System.out.println(oriName);
 	 
 	 //Step 2: Attempt connection with database and execute update user SQL query
 	 try (Connection connection = getConnection(); PreparedStatement statement = 
@@ -161,14 +163,13 @@ public class UserServlet extends HttpServlet {
 	private void deleteUser(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, IOException {
 
-	 String username = request.getParameter("name");
+	 String username = request.getParameter("username");
 
 	 try (Connection connection = getConnection(); PreparedStatement statement = 
 	connection.prepareStatement(DELETE_USERS_SQL);) {
 	 statement.setString(1, username);
 	 int i = statement.executeUpdate();
 	 }
-
 	 response.sendRedirect("http://localhost:8080/DevOps_project/UserServlet/dashboard");
 	}
 

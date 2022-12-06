@@ -12,59 +12,51 @@ crossorigin="anonymous">
 <title>Insert title here</title>
 </head>
 <body>
-<div class="row">
-<div class="container">
-<h3 class="text-center">List of Users</h3>
-<hr>
-<div class="container text-left">
-<!-- Add new user button redirects to the register.jsp page -->
-<a href="<%=request.getContextPath()%>/register.jsp" class="btn btn-
+	<div class="row">
+		<div class="container">
+			<h3 class="text-center">List of Users</h3>
+			<hr>
+			<div class="container text-left">
+				<!-- Add new user button redirects to the register.jsp page -->
+				<a href="<%=request.getContextPath()%>/register_page.jsp"
+					class="btn btn-
 success">Add New User</a>
-</div>
-<br>
-<!-- Create a table to list out all current users information -->
-<table class="table">
-<thead>
-<tr>
-<th>Name</th>
-<th>Password</th>
-<th>Email</th>
-<th>Language</th>
-<th>Actions</th>
-</tr>
-</thead>
-<!-- Pass in the list of users receive via the Servlet’s response to a loop
+			</div>
+			<br>
+			<!-- Create a table to list out all current users information -->
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Password</th>
+						<th>Email</th>
+						<th>Races</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<!-- Pass in the list of users receive via the Servlet’s response to a loop
 -->
-<tbody>
-<c:forEach var="user" items="${listUsers}">
-<!-- For each user in the database, display their
+				<tbody>
+					<c:forEach var="user" items="${listUsers}">
+						<!-- For each user in the database, display their
 information accordingly -->
-<tr>
-<td>
-<c:out value="${user.name}" />
-</td>
-<td>
-<c:out value="${user.password}" />
-</td>
-<td>
-<c:out value="${user.email}" />
-</td>
-<td>
-<c:out value="${user.language}" />
-</td>
-<!-- For each user in the database, Edit/Delete
+						<tr>
+							<td><c:out value="${user.name}" /></td>
+							<td><c:out value="${user.password}" /></td>
+							<td><c:out value="${user.email}" /></td>
+							<td><c:out value="${user.races}" /></td>
+							<!-- For each user in the database, Edit/Delete
 buttons which invokes the edit/delete functions -->
-<td>
-<a href="edit?name=<c:out value='${user.name}'
-/>">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a href="delete?name=<c:out
-value='${user.name}' />">Delete</a>
-</td>
-</tr>
-</c:forEach>
-</tbody>
-</table>
-</div>
-</div>
+							<td><a href="edit?name=<c:out value='${user.name}'
+/>">Edit</a>
+								&nbsp;&nbsp;&nbsp;&nbsp; <a
+								href="delete?name=<c:out
+value='${user.name}' />">Delete</a></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </body>
 </html>
