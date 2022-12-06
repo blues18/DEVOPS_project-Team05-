@@ -37,7 +37,7 @@ public class User {
 		this.races = races;
 	}
 	
-  	protected String username
+  	protected String username;
 	protected String password;
 	protected String email;
 	protected String races;
