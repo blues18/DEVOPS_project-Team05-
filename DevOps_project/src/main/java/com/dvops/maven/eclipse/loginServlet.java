@@ -45,6 +45,7 @@ public class loginServlet extends HttpServlet {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userdetails_storage\",\"root\",\"Ezeikel888=");
+			PreparedStatement
 			
 		}
 		if(username.equals( "userName")&& password.equals("passWord")){
