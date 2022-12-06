@@ -80,6 +80,5 @@ height: 100vh !important;
       </div>
     </div>
   </div>
-</section>
 </body>
 </html>

@@ -45,12 +45,14 @@ Add New User
 				<c:if test="${user != null}">
 					<input type="hidden" name="oriName"
 						value="<c:out
-value='${user.name}' />" />
+value='${user.username}' />" />
 				</c:if>
 				<fieldset class="form-group">
 					<label>User Name</label> <input type="text"
 						value="<c:out
-value='${user.name}' />" class="form-control"
+
+value='${user.username}' />" class="form-control"
+
 						name="username" required="required">
 				</fieldset>
 				<fieldset class="form-group">
@@ -66,7 +68,9 @@ value='${user.email}' />" class="form-control"
 						name="email">
 				</fieldset>
 				<fieldset class="form-group">
-					<label> Race</label> <input type="text"
+
+					<label> Races</label> <input type="text"
+
 						value="<c:out
 value='${user.races}' />" class="form-control"
 						name="races">

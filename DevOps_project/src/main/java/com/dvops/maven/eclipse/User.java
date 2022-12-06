@@ -11,12 +11,12 @@ public class User {
 		this.races = races;
 
 	}
-	
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String username) {
+		this.username = username;
+
 	}
 	public String getPassword() {
 		return password;
@@ -37,6 +37,7 @@ public class User {
 		this.races = races;
 	}
 	
+  protected String username
 	protected String password;
 	protected String email;
 	protected String races;
