@@ -3,6 +3,7 @@ package com.dvops.maven.eclipse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.Connection;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -38,14 +39,17 @@ public class loginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+		String username = request.getParameter("userName");
+		String password = request.getParameter("passWord");
 		//String storedUsername = "userName";
 		//String StoredPassword = "passWord";
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userdetails_storage\",\"root\",\"Ezeikel888=");
-			PreparedStatement
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/userdetails_storage","root","Ezeikel888=");
+			PreparedStatement pst = con.prepareStatement("select * from usersdetails where userName = ? passWord = ?")
+					pst.setString(1, username);
+					pst.setString(2, password);
+					
 			
 		}
 		if(username.equals( "userName")&& password.equals("passWord")){

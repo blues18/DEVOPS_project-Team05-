@@ -163,7 +163,7 @@ public class UserServlet extends HttpServlet {
 	private void deleteUser(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, IOException {
 
-	 String username = request.getParameter("name");
+	 String username = request.getParameter("username");
 
 	 try (Connection connection = getConnection(); PreparedStatement statement = 
 	connection.prepareStatement(DELETE_USERS_SQL);) {
