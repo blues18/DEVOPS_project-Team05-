@@ -3,9 +3,9 @@ package com.dvops.maven.eclipse;
 public class User {
 
 
-	public User(String name, String password, String email, String races) {
+	public User(String username, String password, String email, String races) {
 		super();
-		this.name = name;
+		this.username = username;
 		this.password = password;
 		this.email = email;
 		this.races = races;
@@ -37,7 +37,7 @@ public class User {
 		this.races = races;
 	}
 	
-  protected String username
+  	protected String username
 	protected String password;
 	protected String email;
 	protected String races;
