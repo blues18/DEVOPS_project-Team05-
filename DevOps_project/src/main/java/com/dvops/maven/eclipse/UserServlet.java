@@ -33,6 +33,7 @@ public class UserServlet extends HttpServlet {
 	private static final String DELETE_USERS_SQL = "delete from UserDetails where username = ?;";
 	private static final String UPDATE_USERS_SQL = "update UserDetails set username = ?,password= ?,email =?,races =? where username = ?;";
 
+
 	protected Connection getConnection() {
 		Connection connection = null;
 		try {
@@ -144,6 +145,7 @@ public class UserServlet extends HttpServlet {
 	 String races = request.getParameter("races");
 	 System.out.println(username);
 	 System.out.println(oriName);
+
 	 
 	 //Step 2: Attempt connection with database and execute update user SQL query
 	 try (Connection connection = getConnection(); PreparedStatement statement = 
@@ -164,6 +166,8 @@ public class UserServlet extends HttpServlet {
 	throws SQLException, IOException {
 
 	 String username = request.getParameter("username");
+	 String username = request.getParameter("username");
+
 
 	 try (Connection connection = getConnection(); PreparedStatement statement = 
 	connection.prepareStatement(DELETE_USERS_SQL);) {

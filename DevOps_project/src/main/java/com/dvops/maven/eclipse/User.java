@@ -1,13 +1,15 @@
 package com.dvops.maven.eclipse;
 
 public class User {
-	protected String name;
-	public User (String name, String password, String email, String races) {
-	super();	
-	this.name = name;
-	this.password = password;
-	this.email = email;
-	this.races = races;
+
+
+	public User(String name, String password, String email, String races) {
+		super();
+		this.name = name;
+		this.password = password;
+		this.email = email;
+		this.races = races;
+
 	}
 	
 	public String getName() {
@@ -34,6 +36,7 @@ public class User {
 	public void setRaces(String races) {
 		this.races = races;
 	}
+	
 	protected String password;
 	protected String email;
 	protected String races;
