@@ -7,9 +7,10 @@
 
 	<servlet>
 		<servlet-name>UserServlet</servlet-name>
-		<servlet-class>com.dvops.maven.eclipse.UserServlet</servlet-class>
+		<servlet-class>com.dvops.maven.eclipse.UserServlet</servlet-class> 
 	</servlet>
 
+	
 	<servlet-mapping>
 		<servlet-name>UserServlet</servlet-name>
 		<url-pattern>/UserServlet/dashboard</url-pattern>
@@ -17,6 +18,7 @@
 		<url-pattern>/UserServlet/update</url-pattern>
 		<url-pattern>/UserServlet/delete</url-pattern>
 	</servlet-mapping>
+	
 
 	<servlet>
 		<servlet-name>ProductServlet</servlet-name>
@@ -28,5 +30,5 @@
 		<url-pattern>/ProductServlet/listDisplay</url-pattern>
 		<url-pattern>/ProductServlet/get_name</url-pattern>
 	</servlet-mapping>
-	
+
 </web-app>

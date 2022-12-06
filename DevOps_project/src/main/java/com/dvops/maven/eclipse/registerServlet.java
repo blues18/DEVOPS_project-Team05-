@@ -44,14 +44,14 @@ public class registerServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("passWord");
 		String email = request.getParameter("email");
-		String race = request.getParameter("race");
+		String race = request.getParameter("races");
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/userdetails_storage","root","Ezeikel888="
 					);
-			PreparedStatement ps = con.prepareStatement("insert into userdetails_storage values(?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("insert into userdetails values(?,?,?,?)");
 			
 			ps.setString(1, username);
 			ps.setString(2, password);
