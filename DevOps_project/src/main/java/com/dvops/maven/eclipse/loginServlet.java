@@ -38,8 +38,8 @@ public class loginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String username = request.getParameter("userName");
 		String password = request.getParameter("passWord");
-		String storedUsername = "blue";
-		String StoredPassword = "ezeikel";
+		String storedUsername = "userName";
+		String StoredPassword = "passWord";
 		
 		if(username == storedUsername){
 			System.out.println("Okay");

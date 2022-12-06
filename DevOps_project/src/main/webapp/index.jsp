@@ -11,6 +11,7 @@
 <%@include file="includes/header.jsp"%>
 </head>
 <body style='background-color: lightblue;'>
+
 <%@include file="includes/table.jsp" %>
 </body>
 </html>
