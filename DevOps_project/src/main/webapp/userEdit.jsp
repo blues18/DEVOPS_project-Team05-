@@ -50,7 +50,9 @@ value='${user.username}' />" />
 				<fieldset class="form-group">
 					<label>User Name</label> <input type="text"
 						value="<c:out
+
 value='${user.username}' />" class="form-control"
+
 						name="username" required="required">
 				</fieldset>
 				<fieldset class="form-group">
@@ -66,7 +68,9 @@ value='${user.email}' />" class="form-control"
 						name="email">
 				</fieldset>
 				<fieldset class="form-group">
-					<label> Language</label> <input type="text"
+
+					<label> Races</label> <input type="text"
+
 						value="<c:out
 value='${user.races}' />" class="form-control"
 						name="races">

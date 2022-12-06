@@ -9,7 +9,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,11 +27,13 @@ public class UserServlet extends HttpServlet {
 	private String jdbcUsername = "root";
 	private String jdbcPassword = "Ezeikel888=";
 
+
 	private static final String INSERT_USERS_SQL = "INSERT INTO userdetails" + " (username, password, email, races) VALUES " + " (?, ?, ?);";
 	private static final String SELECT_USER_BY_ID = "select username,password,email,races from userdetails where username =?";
 	private static final String SELECT_ALL_USERS = "select * from userdetails ";
 	private static final String DELETE_USERS_SQL = "delete from userdetails where username = ?;";
 	private static final String UPDATE_USERS_SQL = "update userdetails set username = ?,password= ?,email =?,races =? where username = ?;";
+
 
 	protected Connection getConnection() {
 		Connection connection = null;
@@ -143,6 +144,9 @@ public class UserServlet extends HttpServlet {
 	 String password = request.getParameter("password");
 	 String email = request.getParameter("email");
 	 String races = request.getParameter("races");
+	 System.out.println(username);
+	 System.out.println(oriName);
+
 	 
 	 //Step 2: Attempt connection with database and execute update user SQL query
 	 try (Connection connection = getConnection(); PreparedStatement statement = 
@@ -170,7 +174,6 @@ public class UserServlet extends HttpServlet {
 	 System.out.println(username);
 	 int i = statement.executeUpdate();
 	 }
-
 	 response.sendRedirect("http://localhost:8080/DevOps_project/UserServlet/dashboard");
 	}
 
