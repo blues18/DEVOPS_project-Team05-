@@ -108,7 +108,7 @@ public class UserServlet extends HttpServlet {
 	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
 
-		String username = request.getParameter("name");
+		String username = request.getParameter("username");
 		User existingUser = new User("", "", "", "");
 
 		try (Connection connection = getConnection();

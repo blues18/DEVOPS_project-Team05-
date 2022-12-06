@@ -41,17 +41,17 @@ success">Add New User</a>
 						<!-- For each user in the database, display their
 information accordingly -->
 						<tr>
-							<td><c:out value="${user.name}" /></td>
+							<td><c:out value="${user.username}" /></td>
 							<td><c:out value="${user.password}" /></td>
 							<td><c:out value="${user.email}" /></td>
 							<td><c:out value="${user.races}" /></td>
 							<!-- For each user in the database, Edit/Delete
 buttons which invokes the edit/delete functions -->
-							<td><a href="edit?name=<c:out value='${user.name}'
+							<td><a href="edit?username=<c:out value='${user.username}'
 />">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="delete?name=<c:out
-value='${user.name}' />">Delete</a></td>
+								href="delete?username=<c:out
+value='${user.username}' />">Delete</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
