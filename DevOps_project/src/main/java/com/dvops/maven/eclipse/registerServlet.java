@@ -41,10 +41,11 @@ public class registerServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		String username = request.getParameter("username");
+		String username = request.getParameter("userName");
 		String password = request.getParameter("passWord");
 		String email = request.getParameter("email");
 		String race = request.getParameter("races");
+
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -52,7 +53,7 @@ public class registerServlet extends HttpServlet {
 					"jdbc:mysql://localhost:3306/userdetails_storage","root","Ezeikel888="
 					);
 			PreparedStatement ps = con.prepareStatement("insert into userdetails values(?,?,?,?)");
-			
+
 			ps.setString(1, username);
 			ps.setString(2, password);
 			ps.setString(3, email);

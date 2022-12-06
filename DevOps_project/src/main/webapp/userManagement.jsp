@@ -12,7 +12,6 @@
 	crossorigin="anonymous">
 </head>
 <body>
-
 	<div class="row">
 		<div class="container">
 			<h3 class="text-center">List of Users</h3>
@@ -34,7 +33,6 @@
 						<th>Actions</th>
 					</tr>
 				</thead>
-
 				<tbody>
 					<c:forEach var="user" items="${listUsers}">
 
