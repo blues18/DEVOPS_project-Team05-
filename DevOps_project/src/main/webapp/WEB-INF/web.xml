@@ -29,4 +29,3 @@
 		<url-pattern>/ProductServlet/get_name</url-pattern>
 	</servlet-mapping>
 </web-app>
-

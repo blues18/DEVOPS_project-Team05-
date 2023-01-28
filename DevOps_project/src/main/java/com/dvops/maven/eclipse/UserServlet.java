@@ -9,7 +9,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -143,6 +142,9 @@ public class UserServlet extends HttpServlet {
 	 String password = request.getParameter("password");
 	 String email = request.getParameter("email");
 	 String races = request.getParameter("races");
+	 System.out.println(username);
+	 System.out.println(oriName);
+
 	 
 	 //Step 2: Attempt connection with database and execute update user SQL query
 	 try (Connection connection = getConnection(); PreparedStatement statement = 
@@ -167,9 +169,9 @@ public class UserServlet extends HttpServlet {
 	 try (Connection connection = getConnection(); PreparedStatement statement = 
 	connection.prepareStatement(DELETE_USERS_SQL);) {
 	 statement.setString(1, username);
+	 System.out.println(username);
 	 int i = statement.executeUpdate();
 	 }
-
 	 response.sendRedirect("http://localhost:8080/DevOps_project/UserServlet/dashboard");
 	}
 

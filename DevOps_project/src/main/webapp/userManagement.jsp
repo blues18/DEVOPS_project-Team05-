@@ -12,7 +12,6 @@
 	crossorigin="anonymous">
 </head>
 <body>
-
 	<div class="row">
 		<div class="container">
 			<h3 class="text-center">List of Users</h3>
@@ -34,18 +33,19 @@
 						<th>Actions</th>
 					</tr>
 				</thead>
-
 				<tbody>
 					<c:forEach var="user" items="${listUsers}">
+
 						<tr>
 							<td><c:out value="${user.username}" /></td>
 							<td><c:out value="${user.password}" /></td>
 							<td><c:out value="${user.email}" /></td>
 							<td><c:out value="${user.races}" /></td>
 
-							<td><a href="edit?name=<c:out value='${user.username}' />">Edit</a>
+							<td><a href="edit?username=<c:out value='${user.username}' />">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="delete?name=<c:out value='${user.username}' />">Delete</a></td>
+								href="delete?username=<c:out value='${user.username}' />">Delete</a>
+							</td>
 						</tr>
 					</c:forEach>
 				</tbody>
