@@ -7,6 +7,15 @@
   <name>DevOps_POM</name>
   <description>POM </description>
   
+  <properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+	<junit-jupiter.groupId>org.junit.jupiter</junit-jupiter.groupId>
+    <junit-jupiter.artifactId>junit-jupiter</junit-jupiter.artifactId>
+    <junit-jupiter.version>5.7.0</junit-jupiter.version>
+</properties>
+  
   <dependencies>
  	<dependency>
  		<groupId>mysql</groupId>
@@ -30,8 +39,13 @@
 		<artifactId>jstl</artifactId>
 		<version>1.2</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+	<dependency>
+	    <groupId>${junit-jupiter.groupId}</groupId>
+	    <artifactId>${junit-jupiter.artifactId}</artifactId>
+	    <version>5.7.0</version>
+	</dependency>
 </dependencies>
-
 
   <build>
     <plugins>

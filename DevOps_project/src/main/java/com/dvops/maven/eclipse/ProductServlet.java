@@ -112,7 +112,6 @@ public class ProductServlet extends HttpServlet {
 
 		request.setAttribute("listProduct", products);
 		request.getRequestDispatcher("/viewAllproduct.jsp").forward(request, response);
-
 	}
 
 	// method to get parameter, query database for existing user data and redirect
