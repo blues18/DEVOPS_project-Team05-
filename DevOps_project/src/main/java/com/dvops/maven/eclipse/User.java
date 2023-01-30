@@ -1,5 +1,7 @@
 package com.dvops.maven.eclipse;
 
+
+
 public class User {
 
 
@@ -9,7 +11,6 @@ public class User {
 		this.password = password;
 		this.email = email;
 		this.races = races;
-
 	}
 	public String getUsername() {
 		return username;
@@ -36,10 +37,8 @@ public class User {
 	public void setRaces(String races) {
 		this.races = races;
 	}
-	
   	protected String username;
 	protected String password;
 	protected String email;
 	protected String races;
-
 }

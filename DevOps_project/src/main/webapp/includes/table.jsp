@@ -6,7 +6,6 @@
 <meta charset="ISO-8859-1">
 <meta charset="utf-8">
 <link rel="stylesheet">
-
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 	rel="stylesheet">

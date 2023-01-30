@@ -62,7 +62,7 @@
 						<c:out value="${product.product_description}" />
 						"
 					</p>
-					<row> 
+					<row>
 						<a
 						href="get_name?product_name=<c:out value='${product.product_name}'/>"
 						class="btn btn-success">See Product</a> <a href="#"

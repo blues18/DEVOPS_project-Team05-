@@ -1,3 +1,4 @@
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>DevOps_project</groupId>
@@ -6,7 +7,14 @@
   <packaging>war</packaging>
   <name>DevOps_POM</name>
   <description>POM </description>
-  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <junit-jupiter.groupId>org.junit.jupiter</junit-jupiter.groupId>
+    <junit-jupiter.artifactId>junit-jupiter</junit-jupiter.artifactId>
+    <junit-jupiter.version>5.7.0</junit-jupiter.version>
+  </properties>
   <dependencies>
  	<dependency>
  		<groupId>mysql</groupId>
@@ -30,8 +38,13 @@
 		<artifactId>jstl</artifactId>
 		<version>1.2</version>
 	</dependency>
+	<dependency>
+      <groupId>${junit-jupiter.groupId}</groupId>
+      <artifactId>${junit-jupiter.artifactId}</artifactId>
+      <version>${junit-jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
 </dependencies>
-
   <build>
     <plugins>
       <plugin>
@@ -41,6 +54,10 @@
           <release>17</release>
         </configuration>
       </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.3</version>

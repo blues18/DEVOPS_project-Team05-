@@ -62,7 +62,7 @@ height: 100vh !important;
               </div>
 				<div class="row">
                 <div class="col-12">
-                  <select class="select form-control-lg" name="race">
+                  <select class="select form-control-lg" name="races">
                     <option value="1" disabled>Choose your Race</option>
                     <option value="Chinese">Chinese</option>
                     <option value="Malay">Malay</option>
