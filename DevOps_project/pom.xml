@@ -7,7 +7,34 @@
   <name>DevOps_POM</name>
   <description>POM </description>
   
+  <properties>
+    <selenium.groupId>org.seleniumhq.selenium</selenium.groupId>
+    <selenium.artifactId>selenium-java</selenium.artifactId>
+    <selenium.version>4.5.0</selenium.version>
+    
+    <testng.groupId>org.testng</testng.groupId>
+    <testng.artifactId>testng</testng.artifactId>
+    <testng.version>6.9.10</testng.version>
+  </properties>
+  
   <dependencies>
+    <dependency>
+  <groupId>${selenium.groupId}</groupId>
+  <artifactId>${selenium.artifactId}</artifactId>
+  <version>${selenium.version}</version>
+  </dependency>
+  <dependency>
+  <groupId>${testng.groupId}</groupId>
+  <artifactId>${testng.artifactId}</artifactId>
+  <version>${testng.version}</version>
+  </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    
  	<dependency>
  		<groupId>mysql</groupId>
  		<artifactId>mysql-connector-java</artifactId>
