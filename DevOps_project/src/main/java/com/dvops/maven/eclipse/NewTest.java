@@ -28,7 +28,12 @@ public class NewTest {
   
   @Test
   public void checkRegister() {
-	  
+  	webDriver.navigate().to("http://localhost:8080/DevOps_project/register_page.jsp");
+  	webDriver.findElement(By.name("userName")).sendKeys("testuser");
+  	webDriver.findElement(By.name("passWord")).sendKeys("testpassword");
+  	webDriver.findElement(By.name("email")).sendKeys("testuser@example.com");
+  	webDriver.findElement(By.name("race")).sendKeys("Chinese");
+  	webDriver.findElement(By.name("submit")).click();
   }
 
 
