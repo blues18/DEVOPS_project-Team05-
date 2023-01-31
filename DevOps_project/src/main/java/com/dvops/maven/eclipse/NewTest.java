@@ -9,49 +9,43 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
 public class NewTest {
-private WebDriver webDriver;		
+  private WebDriver webDriver;
 
-@Test
-public void checkId() {
-	  webDriver.navigate().to("https://devopsessentials.github.io");
-	  WebElement we =  webDriver.findElement(By.id("content"));
-	  System.out.println("id we: "+we.getAttribute("role"));
-	  Assert.assertEquals(we.getAttribute("role"), "contentinfo");
-}
-@Test
-public void checkTitle() {
-	  webDriver.navigate().to("https://devopsessentials.github.io");
+  @Test
+  public void checkLogin() {
+    webDriver.navigate().to("http://localhost:8080/DevOps_project/login.jsp");
+    webDriver.findElement(By.name("userName")).sendKeys("tester");
+    webDriver.findElement(By.name("passWord")).sendKeys("password");
+    webDriver.findElement(By.name("submit")).click();
+  }
+  
+  @Test
+  public void checkItem() {
+      webDriver.navigate().to("http://localhost:8080/DevOps_project/ProductServlet/listDisplay");
+      WebElement card = webDriver.findElement(By.className("card"));
+      Assert.assertTrue(card.isDisplayed());
+  }
+  
+  @Test
+  public void checkRegister() {
 	  
-	  //Assert the title to check that we are indeed in the correct website
-	  Assert.assertEquals(webDriver.getTitle(), "Home");
-	  
-	  System.out.println("title: "+webDriver.getTitle());
-	  
-	  //Retrieve link using it's class name and click on it
-	  webDriver.findElement(By.className("link")).click();
-
-	  //Assert the new title to check that the title contain Wikipedia and the button had successfully bring us to the new page
-	  Assert.assertTrue(webDriver.getTitle().contains("Wikipedia"));
-	  System.out.println("new title: "+webDriver.getTitle());
-}
-
+  }
 
 
 @BeforeTest
 public void beforeTest() {
 	  //Setting system properties of ChromeDriver
-	  //to amend directory path base on your local file path
+	  //to amend directory path based on your local file path
 	  String chromeDriverDir = "C:\\Program Files\\Google\\Chrome\\chromedriver.exe";
 	  System.setProperty("webdriver.chrome.driver", chromeDriverDir);
 
-	  //initialize FirefoxDriver at the start of test
+	  //initialize ChromeDriver at the start of test
 	  webDriver = new ChromeDriver();  
 }
 
 @AfterTest
 public void afterTest() {
-	  //Quit the ChromeDriver and close all associated window at the end of test
-	  webDriver.quit();			
+  webDriver.quit();
 }
 
 }
