@@ -27,11 +27,11 @@ public class UserServlet extends HttpServlet {
 	private String jdbcUsername = "root";
 	private String jdbcPassword = "Ezeikel888=";
 
-	private static final String INSERT_USERS_SQL = "INSERT INTO UserDetails" + " (username, password, email, races) VALUES " + " (?, ?, ?);";
-	private static final String SELECT_USER_BY_ID = "select username,password,email,races from UserDetails where username =?";
-	private static final String SELECT_ALL_USERS = "select * from UserDetails ";
-	private static final String DELETE_USERS_SQL = "delete from UserDetails where username = ?;";
-	private static final String UPDATE_USERS_SQL = "update UserDetails set username = ?,password= ?,email =?,races =? where username = ?;";
+	private static final String INSERT_USERS_SQL = "INSERT INTO userdetails" + " (username, password, email, races) VALUES " + " (?, ?, ?);";
+	private static final String SELECT_USER_BY_ID = "select username,password,email,races from userdetails where username =?";
+	private static final String SELECT_ALL_USERS = "select * from userdetails ";
+	private static final String DELETE_USERS_SQL = "delete from UserDetails_Storage where username = ?;";
+	private static final String UPDATE_USERS_SQL = "update UserDetails_Storage set username = ?,password= ?,email =?,races =? where username = ?;";
 
 	protected Connection getConnection() {
 		Connection connection = null;
@@ -144,6 +144,7 @@ public class UserServlet extends HttpServlet {
 	 String races = request.getParameter("races");
 	 System.out.println(username);
 	 System.out.println(oriName);
+
 	 
 	 //Step 2: Attempt connection with database and execute update user SQL query
 	 try (Connection connection = getConnection(); PreparedStatement statement = 
@@ -168,6 +169,7 @@ public class UserServlet extends HttpServlet {
 	 try (Connection connection = getConnection(); PreparedStatement statement = 
 	connection.prepareStatement(DELETE_USERS_SQL);) {
 	 statement.setString(1, username);
+	 System.out.println(username);
 	 int i = statement.executeUpdate();
 	 }
 	 response.sendRedirect("http://localhost:8080/DevOps_project/UserServlet/dashboard");

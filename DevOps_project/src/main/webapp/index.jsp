@@ -14,3 +14,5 @@
 <%@include file="includes/table.jsp" %>
 </body>
 </html>
+
+<!-- testing Build Automation in jenkins -->
