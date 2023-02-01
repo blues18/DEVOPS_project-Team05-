@@ -41,7 +41,6 @@
 							<td><c:out value="${user.password}" /></td>
 							<td><c:out value="${user.email}" /></td>
 							<td><c:out value="${user.races}" /></td>
-
 							<td><a href="edit?username=<c:out value='${user.username}' />">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
 								href="delete?username=<c:out value='${user.username}' />">Delete</a>

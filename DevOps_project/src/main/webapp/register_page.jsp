@@ -72,7 +72,7 @@ height: 100vh !important;
                 </div>
               </div>
               <div class="mt-4 pt-2">
-              <button class="btn btn-primary btn-lg" type="submit" value= "call Servlet">Submit</button>
+              <button class="btn btn-primary btn-lg" type="submit" value= "call Servlet" name="submit">Submit</button>
               </div>
             </form>
           </div>

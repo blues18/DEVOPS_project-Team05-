@@ -50,7 +50,6 @@ value='${user.username}' />" />
 				<fieldset class="form-group">
 					<label>User Name</label> <input type="text"
 						value="<c:out
-
 value='${user.username}' />" class="form-control"
 
 						name="username" required="required">

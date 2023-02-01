@@ -8,6 +8,18 @@
   <description>POM </description>
   
   <properties>
+    <selenium.groupId>org.seleniumhq.selenium</selenium.groupId>
+    <selenium.artifactId>selenium-java</selenium.artifactId>
+    <selenium.version>4.5.0</selenium.version>
+    
+    <testng.groupId>org.testng</testng.groupId>
+    <testng.artifactId>testng</testng.artifactId>
+    <testng.version>6.9.10</testng.version>
+    
+	<junit-jupiter.groupId>org.junit.jupiter</junit-jupiter.groupId>
+    <junit-jupiter.artifactId>junit-jupiter</junit-jupiter.artifactId>
+    <junit-jupiter.version>5.7.0</junit-jupiter.version>
+
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -15,8 +27,26 @@
     <junit-jupiter.artifactId>junit-jupiter</junit-jupiter.artifactId>
     <junit-jupiter.version>5.7.0</junit-jupiter.version>
 </properties>
+
   
   <dependencies>
+    <dependency>
+  <groupId>${selenium.groupId}</groupId>
+  <artifactId>${selenium.artifactId}</artifactId>
+  <version>${selenium.version}</version>
+  </dependency>
+  <dependency>
+  <groupId>${testng.groupId}</groupId>
+  <artifactId>${testng.artifactId}</artifactId>
+  <version>${testng.version}</version>
+  </dependency>
+  
+	<dependency>
+	    <groupId>${junit-jupiter.groupId}</groupId>
+	    <artifactId>${junit-jupiter.artifactId}</artifactId>
+	    <version>5.7.0</version>
+	</dependency>
+   
  	<dependency>
  		<groupId>mysql</groupId>
  		<artifactId>mysql-connector-java</artifactId>
