@@ -1,15 +1,13 @@
 package com.dvops.maven.eclipse;
-
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-class UserTest {
+class LoginTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
+	
 	}
 
 	@AfterEach
@@ -17,23 +15,15 @@ class UserTest {
 	}
 
 	@Test
-	void testGetUsername() {
+	void testDoGetHttpServletRequestHttpServletResponse() {
 		fail("Not yet implemented");
+
 	}
 
 	@Test
-	void testGetPassword() {
+	void testDoPostHttpServletRequestHttpServletResponse() {
 		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetEmail() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetRaces() {
-		fail("Not yet implemented");
+	
 	}
 
 }
