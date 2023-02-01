@@ -1,7 +1,7 @@
 package com.dvops.maven.eclipse;
 
 public class product_array_object {
-	public products_model product[] = new products_model[1];
+	public products_model product[] = new products_model[2];
 	
 	public product_array_object() {
 		
