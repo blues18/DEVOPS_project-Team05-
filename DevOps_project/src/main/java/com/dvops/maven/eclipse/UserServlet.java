@@ -50,7 +50,7 @@ public class UserServlet extends HttpServlet {
 
 	private void listUsers(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
-		List<User> users = new ArrayList<>();
+		List<user> users = new ArrayList<>();
 		try (Connection connection = getConnection();
 
 				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
@@ -62,7 +62,7 @@ public class UserServlet extends HttpServlet {
 				String password = rs.getString("password");
 				String email = rs.getString("email");
 				String races = rs.getString("races");
-				users.add(new User(username, password, email, races));
+				users.add(new user(username, password, email, races));
 
 			}
 		} catch (SQLException e) {
@@ -111,7 +111,7 @@ public class UserServlet extends HttpServlet {
 			throws SQLException, ServletException, IOException {
 
 		String username = request.getParameter("username");
-		User existingUser = new User("", "", "", "");
+		user existingUser = new user("", "", "", "");
 
 		try (Connection connection = getConnection();
 
@@ -125,7 +125,7 @@ public class UserServlet extends HttpServlet {
 				String password = rs.getString("password");
 				String email = rs.getString("email");
 				String races = rs.getString("races");
-				existingUser = new User(username, password, email, races);
+				existingUser = new user(username, password, email, races);
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -134,7 +134,6 @@ public class UserServlet extends HttpServlet {
 		request.setAttribute("user", existingUser);
 		request.getRequestDispatcher("/userEdit.jsp").forward(request, response);
 	}
-
 	// method to update the user table base on the form data
 	private void updateUser(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, IOException {

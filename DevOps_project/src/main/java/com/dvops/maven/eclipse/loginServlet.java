@@ -57,9 +57,7 @@ public class loginServlet extends HttpServlet {
 					);
 			writer.close();
 			doGet(request, response);
-		};
-		
-		
+		};	
 	}
 
 }
