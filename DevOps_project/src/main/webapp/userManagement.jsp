@@ -34,8 +34,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach var="user" items="${listUsers}">
-
+					<c:forEach var="user" items="${listUsers}" >
 						<tr>
 							<td><c:out value="${user.username}" /></td>
 							<td><c:out value="${user.password}" /></td>

@@ -6,16 +6,4 @@
       <class name="com.dvops.maven.eclipse.NewTest"/>
     </classes>
   </test> <!-- Default test -->
-  <test parallel="none" name="Default test(failed)">
-    <classes>
-      <class name="com.dvops.maven.eclipse.NewTest">
-        <methods>
-          <include name="checkItem"/>
-          <include name="checkRegister"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.dvops.maven.eclipse.NewTest -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
