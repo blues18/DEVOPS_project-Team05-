@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -49,12 +49,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Ryuuko\AppData\Local\Temp\testng-eclipse-1036134747\testng-customsuite.xml</span>
+                    <span>C:\Users\Ryuuko\AppData\Local\Temp\testng-eclipse--173980977\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,11 +103,6 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.dvops.maven.eclipse.NewTest" class="method navigator-link" hash-for-method="checkLogin">checkLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.dvops.maven.eclipse.NewTest" class="method navigator-link" hash-for-method="checkRegister">checkRegister</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -122,6 +117,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.dvops.maven.eclipse.NewTest" class="method navigator-link" hash-for-method="checkItem">checkItem</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.dvops.maven.eclipse.NewTest" class="method navigator-link" hash-for-method="checkRegister">checkRegister</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -152,14 +152,15 @@
                   <a name="checkLogin">
                   </a> <!-- checkLogin -->
                   <span class="method-name">checkLogin</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable: [object HTMLButtonElement] has no size and location
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;submit&apos;]&quot;}
   (Session info: chrome=109.0.5414.120)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [71b56ea4764f8578a25505a20679e4b7, actions {actions=[org.openqa.selenium.interactions.Sequence@7c29adc8]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\Ryuuko\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54050}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54050/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 71b56ea4764f8578a25505a20679e4b7
+Command: [81d93cce0a11783c6ee637d5ac1de6ee, findElement {using=name, value=submit}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\Ryuuko\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54422}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54422/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 81d93cce0a11783c6ee637d5ac1de6ee
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -172,67 +173,11 @@ Session ID: 71b56ea4764f8578a25505a20679e4b7
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:615)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:536)
-	at com.dvops.maven.eclipse.NewTest.checkLogin(NewTest.java:22)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="checkRegister">
-                  </a> <!-- checkRegister -->
-                  <span class="method-name">checkRegister</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable: [object HTMLButtonElement] has no size and location
-  (Session info: chrome=109.0.5414.120)
-Build info: version: &apos;4.5.0&apos;, revision: &apos;fe167b119a&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [71b56ea4764f8578a25505a20679e4b7, actions {actions=[org.openqa.selenium.interactions.Sequence@38a1a26]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\Ryuuko\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54050}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54050/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 71b56ea4764f8578a25505a20679e4b7
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:615)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:536)
-	at com.dvops.maven.eclipse.NewTest.checkRegister(NewTest.java:41)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at com.dvops.maven.eclipse.NewTest.checkLogin(NewTest.java:20)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -278,6 +223,13 @@ Session ID: 71b56ea4764f8578a25505a20679e4b7
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="checkRegister">
+                  </a> <!-- checkRegister -->
+                  <span class="method-name">checkRegister</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="checkUser">
                   </a> <!-- checkUser -->
                   <span class="method-name">checkUser</span>
@@ -288,7 +240,7 @@ Session ID: 71b56ea4764f8578a25505a20679e4b7
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Ryuuko\AppData\Local\Temp\testng-eclipse-1036134747\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Ryuuko\AppData\Local\Temp\testng-eclipse--173980977\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -300,6 +252,17 @@ Session ID: 71b56ea4764f8578a25505a20679e4b7
       &lt;class name=&quot;com.dvops.maven.eclipse.NewTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
+  &lt;test parallel=&quot;none&quot; name=&quot;Default test(failed)&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.dvops.maven.eclipse.NewTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;checkLogin&quot;/&gt;
+          &lt;include name=&quot;afterTest&quot;/&gt;
+          &lt;include name=&quot;beforeTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.dvops.maven.eclipse.NewTest --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -312,6 +275,9 @@ Session ID: 71b56ea4764f8578a25505a20679e4b7
             <ul>
               <li>
                 <span class="test-name">Default test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Default test(failed) (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -341,15 +307,15 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'checkItem')
 data.setCell(0, 2, 'com.dvops.maven.eclipse.NewTest')
-data.setCell(0, 3, 2274);
+data.setCell(0, 3, 1145);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'checkRegister')
 data.setCell(1, 2, 'com.dvops.maven.eclipse.NewTest')
-data.setCell(1, 3, 556);
+data.setCell(1, 3, 694);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'checkLogin')
 data.setCell(2, 2, 'com.dvops.maven.eclipse.NewTest')
-data.setCell(2, 3, 344);
+data.setCell(2, 3, 386);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'checkUser')
 data.setCell(3, 2, 'com.dvops.maven.eclipse.NewTest')
@@ -358,7 +324,7 @@ window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -391,27 +357,25 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">checkItem</span>
-                <span class="method-start">1130 ms</span>
+                <span class="method-start">1043 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">checkLogin</span>
-                <span class="method-start">3405 ms</span>
+                <span class="method-start">2188 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">checkRegister</span>
-                <span class="method-start">3751 ms</span>
+                <span class="method-start">2577 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkUser</span>
-                <span class="method-start">4308 ms</span>
+                <span class="method-start">3272 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">4563 ms</span>
+                <span class="method-start">3527 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

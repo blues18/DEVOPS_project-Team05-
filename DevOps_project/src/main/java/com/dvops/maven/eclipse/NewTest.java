@@ -17,9 +17,7 @@ public class NewTest {
     webDriver.navigate().to("http://localhost:8090/DevOps_project/login.jsp");
     webDriver.findElement(By.name("userName")).sendKeys("tester");
     webDriver.findElement(By.name("passWord")).sendKeys("password");
-    WebElement button = webDriver.findElement(By.className("btn"));
-	Actions actions = new Actions(webDriver);
-	actions.contextClick(button).perform();;
+    webDriver.findElement(By.name("submit")).click();
   }
   
   @Test
@@ -31,14 +29,12 @@ public class NewTest {
   
   @Test
   public void checkRegister() {
-  	webDriver.navigate().to("http://localhost:8090/DevOps_project/register_page.jsp");
-  	webDriver.findElement(By.name("userName")).sendKeys("testuser");
-  	webDriver.findElement(By.name("passWord")).sendKeys("testpassword");
-  	webDriver.findElement(By.name("email")).sendKeys("testuser@example.com");
-  	webDriver.findElement(By.name("races")).sendKeys("Chinese");
-    WebElement button = webDriver.findElement(By.className("btn"));
-    Actions actions = new Actions(webDriver);
-    actions.contextClick(button).perform();;
+      webDriver.navigate().to("http://localhost:8090/DevOps_project/register_page.jsp");
+      webDriver.findElement(By.name("userName")).sendKeys("testuser");
+      webDriver.findElement(By.name("passWord")).sendKeys("testpassword");
+      webDriver.findElement(By.name("email")).sendKeys("testuser@example.com");
+      webDriver.findElement(By.name("races")).sendKeys("Chinese");
+      webDriver.findElement(By.name("submit")).click();
   }
   
   @Test

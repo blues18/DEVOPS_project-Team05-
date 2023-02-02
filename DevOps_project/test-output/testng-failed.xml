@@ -10,7 +10,6 @@
     <classes>
       <class name="com.dvops.maven.eclipse.NewTest">
         <methods>
-          <include name="checkRegister"/>
           <include name="checkLogin"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
