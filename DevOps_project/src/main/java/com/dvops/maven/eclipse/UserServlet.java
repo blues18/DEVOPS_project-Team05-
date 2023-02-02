@@ -27,6 +27,7 @@ public class UserServlet extends HttpServlet {
 	private String jdbcUsername = "root";
 	private String jdbcPassword = "Ezeikel888=";
 
+	
 
 	private static final String INSERT_USERS_SQL = "INSERT INTO userdetails" + " (username, password, email, races) VALUES " + " (?, ?, ?);";
 	private static final String SELECT_USER_BY_ID = "select username,password,email,races from userdetails where username =?";

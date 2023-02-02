@@ -4,13 +4,26 @@ import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+//import javax.servlet.ServletException;
+//import javax.servlet.http.HttpServlet;
+//import javax.servlet.http.HttpServletRequest;
+//import javax.servlet.http.HttpServletResponse;
+//import org.mockito.Mockito;
+
+
 class RegisterTest {
+
+
 	private UserCollection sc;
 	private user s1;
 	private user s2;
 	private final int USER_COLLECTION_SIZE = 2;
+	
+	
 	@BeforeEach
 	void setUp() throws Exception {
+		
+	
 		sc = new UserCollection();
 		s1 = new user("ryan", "password","ryan@gmail.com", "chinese");
 		s2 = new user("james", "password","james@gmail.com", "malay");
@@ -22,10 +35,17 @@ class RegisterTest {
 	}
 	@Test
 	void testDoPostHttpServletRequestHttpServletResponse() {
+		
+	
+		
+		
+		
 		List<user> testSc = sc.getUser();
 		assertEquals(testSc.size(), USER_COLLECTION_SIZE);
 		sc.addUser(s1);
 		assertEquals(sc.getUser().size(), USER_COLLECTION_SIZE+1);
 	}
 }
+
+
 

@@ -6,6 +6,7 @@ import java.util.List;
 
 
 public class UserCollection {
+	
 
 	 private ArrayList<user> users = new ArrayList<>();
 	 private int capacity;
