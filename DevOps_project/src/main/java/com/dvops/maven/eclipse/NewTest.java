@@ -10,7 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
 public class NewTest {
-  private WebDriver webDriver;
+  WebDriver webDriver;
 
   @Test
   public void checkLogin() {

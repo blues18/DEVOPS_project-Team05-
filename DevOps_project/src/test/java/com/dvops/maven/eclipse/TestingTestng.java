@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestingTestng {
-  private WebDriver webDriver;
+  WebDriver webDriver;
   private NewTest newTest;
 
   @BeforeEach
