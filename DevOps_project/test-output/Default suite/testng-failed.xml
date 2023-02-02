@@ -3,21 +3,16 @@
 <suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test" verbose="2">
     <classes>
-      <class name="com.dvops.maven.eclipse.NewTest"/>
+      <class name="com.dvops.maven.eclipse.RegisterTest"/>
+      <class name="com.dvops.maven.eclipse.TestingTestng"/>
+      <class name="com.dvops.maven.eclipse.ProductArrayTest"/>
+      <class name="com.dvops.maven.eclipse.TestingJavaTest"/>
+      <class name="com.dvops.maven.eclipse.UserServletTest"/>
+      <class name="com.dvops.maven.eclipse.UserTest"/>
+      <class name="com.dvops.maven.eclipse.LoginTest"/>
+      <class name="com.dvops.maven.eclipse.ProductServletTest"/>
+      <class name="com.dvops.maven.eclipse.TableServletTest"/>
+      <class name="com.dvops.maven.eclipse.ProductModelTest"/>
     </classes>
   </test> <!-- Default test -->
-  <test parallel="none" name="Default test(failed)">
-    <classes>
-      <class name="com.dvops.maven.eclipse.NewTest">
-        <methods>
-          <include name="checkItem"/>
-          <include name="checkRegister"/>
-          <include name="checkUser"/>
-          <include name="checkLogin"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.dvops.maven.eclipse.NewTest -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

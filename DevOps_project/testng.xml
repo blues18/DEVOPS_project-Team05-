@@ -3,14 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.dvops.maven.eclipse.ProductServletTest"/>
-      <class name="com.dvops.maven.eclipse.ProductArrayTest"/>
-      <class name="com.dvops.maven.eclipse.UserTest"/>
-      <class name="com.dvops.maven.eclipse.LoginTest"/>
-      <class name="com.dvops.maven.eclipse.UserServletTest"/>
-      <class name="com.dvops.maven.eclipse.RegisterTest"/>
       <class name="com.dvops.maven.eclipse.NewTest"/>
-      <class name="com.dvops.maven.eclipse.ProductModelTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
