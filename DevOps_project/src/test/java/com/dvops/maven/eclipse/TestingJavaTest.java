@@ -1,42 +1,41 @@
 package com.dvops.maven.eclipse;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
+import static org.testng.Assert.assertEquals;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.junit.jupiter.api.Test;
 
 class TestingJavaTest {
 
-	private testingjava servlet = new testingjava();
-	private HttpServletRequest request = mock(HttpServletRequest.class);
-	private HttpServletResponse response = mock(HttpServletResponse.class);
-	private StringWriter stringWriter = new StringWriter();
-	private PrintWriter writer = new PrintWriter(stringWriter);
-
 	@Test
 	void testDoGet() throws Exception {
+		HttpServletRequest request = mock(HttpServletRequest.class);
+		HttpServletResponse response = mock(HttpServletResponse.class);
+		StringWriter stringWriter = new StringWriter();
+		PrintWriter writer = new PrintWriter(stringWriter);
 		when(response.getWriter()).thenReturn(writer);
-
-		servlet.doGet(request, response);
-
+		new testingjava().doGet(request, response);
+		verify(response).setContentType("text/html");
+		writer.flush();
 		assertEquals("Served at: ", stringWriter.toString());
 	}
-
+	
 	@Test
 	void testDoPost() throws Exception {
-		when(request.getParameter("yourName")).thenReturn("John");
+		HttpServletRequest request = mock(HttpServletRequest.class);
+		HttpServletResponse response = mock(HttpServletResponse.class);
+		when(request.getParameter("yourName")).thenReturn("tester");
+		StringWriter stringWriter = new StringWriter();
+		PrintWriter writer = new PrintWriter(stringWriter);
 		when(response.getWriter()).thenReturn(writer);
-
-		servlet.doPost(request, response);
-
-		assertEquals("<h1> Hello John </h1>", stringWriter.toString());
+		new testingjava().doPost(request, response);
+		verify(response).setContentType("text/html");
+		writer.flush();
+		assertEquals("<h1> Hello </h1>", stringWriter.toString());
 	}
 
 }

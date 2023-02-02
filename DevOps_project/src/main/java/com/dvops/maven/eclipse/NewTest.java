@@ -3,23 +3,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
 public class NewTest {
-  WebDriver webDriver;
+  private WebDriver webDriver;
 
   @Test
   public void checkLogin() {
     webDriver.navigate().to("http://localhost:8090/DevOps_project/login.jsp");
     webDriver.findElement(By.name("userName")).sendKeys("tester");
     webDriver.findElement(By.name("passWord")).sendKeys("password");
-    WebElement button = webDriver.findElement(By.className("btn"));
-    Actions actions = new Actions(webDriver);
-    actions.contextClick(button).perform();;
+    webDriver.findElement(By.id("submit")).click();
   }
   
   @Test
@@ -36,9 +33,7 @@ public class NewTest {
   	webDriver.findElement(By.name("passWord")).sendKeys("testpassword");
   	webDriver.findElement(By.name("email")).sendKeys("testuser@example.com");
   	webDriver.findElement(By.name("races")).sendKeys("Chinese");
-  	WebElement button = webDriver.findElement(By.className("btn"));
-    Actions actions = new Actions(webDriver);
-    actions.contextClick(button).perform();;
+  	webDriver.findElement(By.id("submit")).click();
   }
   
   @Test

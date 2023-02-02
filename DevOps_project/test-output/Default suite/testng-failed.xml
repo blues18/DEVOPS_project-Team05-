@@ -3,16 +3,7 @@
 <suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test" verbose="2">
     <classes>
-      <class name="com.dvops.maven.eclipse.RegisterTest"/>
-      <class name="com.dvops.maven.eclipse.TestingTestng"/>
-      <class name="com.dvops.maven.eclipse.ProductArrayTest"/>
-      <class name="com.dvops.maven.eclipse.TestingJavaTest"/>
-      <class name="com.dvops.maven.eclipse.UserServletTest"/>
-      <class name="com.dvops.maven.eclipse.UserTest"/>
-      <class name="com.dvops.maven.eclipse.LoginTest"/>
-      <class name="com.dvops.maven.eclipse.ProductServletTest"/>
-      <class name="com.dvops.maven.eclipse.TableServletTest"/>
-      <class name="com.dvops.maven.eclipse.ProductModelTest"/>
+      <class name="com.dvops.maven.eclipse.NewTest"/>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Failed suite [Default suite] -->

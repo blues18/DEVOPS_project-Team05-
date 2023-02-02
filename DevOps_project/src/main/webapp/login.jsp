@@ -64,7 +64,7 @@ font-weight: 300;
                     <a href="#" style="float:right;font-size:12px;"> Forgot password? </a>  
                     <input type="text" class="form-control form-control-sm" name="passWord">  
                 </div>  
-                <button type="submit" class="btn btn-primary btn-block" value="submit values" name="submit"> Sign in </button>  
+                <button type="submit" class="btn btn-primary btn-block" value="submit values" id="submit"> Sign in </button>  
                 <div class="sign-up">  
                     Don't have an account? <a href="<%=request.getContextPath()%>/register_page.jsp"> Create One </a>
                 </div>  
