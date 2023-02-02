@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.dvops.maven.eclipse.ProductServletTest"/>
+      <class name="com.dvops.maven.eclipse.ProductArrayTest"/>
+      <class name="com.dvops.maven.eclipse.UserTest"/>
+      <class name="com.dvops.maven.eclipse.LoginTest"/>
+      <class name="com.dvops.maven.eclipse.UserServletTest"/>
+      <class name="com.dvops.maven.eclipse.RegisterTest"/>
+      <class name="com.dvops.maven.eclipse.NewTest"/>
+      <class name="com.dvops.maven.eclipse.ProductModelTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test parallel="none" name="Test(failed)">
+    <classes>
+      <class name="com.dvops.maven.eclipse.NewTest">
+        <methods>
+          <include name="checkItem"/>
+          <include name="checkRegister"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.dvops.maven.eclipse.NewTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

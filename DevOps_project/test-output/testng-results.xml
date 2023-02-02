@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="3" passed="3" failed="0" skipped="0">
+<testng-results total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-01T19:03:10Z" name="Default suite" finished-at="2023-02-01T19:03:14Z" duration-ms="3799">
+  <suite started-at="2023-02-02T10:02:07Z" name="Default suite" finished-at="2023-02-02T10:02:12Z" duration-ms="5713">
     <groups>
     </groups>
-    <test started-at="2023-02-01T19:03:10Z" name="Default test" finished-at="2023-02-01T19:03:14Z" duration-ms="3799">
+    <test started-at="2023-02-02T10:02:07Z" name="Default test" finished-at="2023-02-02T10:02:12Z" duration-ms="5713">
       <class name="com.dvops.maven.eclipse.NewTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.dvops.maven.eclipse.NewTest@5c44c582]" started-at="2023-02-02T03:03:10Z" name="beforeTest" finished-at="2023-02-02T03:03:11Z" duration-ms="1161" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.dvops.maven.eclipse.NewTest@6cc558c6]" started-at="2023-02-02T18:02:07Z" name="beforeTest" finished-at="2023-02-02T18:02:08Z" duration-ms="1129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="checkItem()[pri:0, instance:com.dvops.maven.eclipse.NewTest@5c44c582]" started-at="2023-02-02T03:03:11Z" name="checkItem" finished-at="2023-02-02T03:03:13Z" duration-ms="1503" status="PASS">
+        <test-method signature="checkItem()[pri:0, instance:com.dvops.maven.eclipse.NewTest@6cc558c6]" started-at="2023-02-02T18:02:08Z" name="checkItem" finished-at="2023-02-02T18:02:10Z" duration-ms="2123" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkItem -->
-        <test-method signature="checkLogin()[pri:0, instance:com.dvops.maven.eclipse.NewTest@5c44c582]" started-at="2023-02-02T03:03:13Z" name="checkLogin" finished-at="2023-02-02T03:03:13Z" duration-ms="386" status="PASS">
+        <test-method signature="checkLogin()[pri:0, instance:com.dvops.maven.eclipse.NewTest@6cc558c6]" started-at="2023-02-02T18:02:10Z" name="checkLogin" finished-at="2023-02-02T18:02:11Z" duration-ms="1059" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLogin -->
-        <test-method signature="checkRegister()[pri:0, instance:com.dvops.maven.eclipse.NewTest@5c44c582]" started-at="2023-02-02T03:03:13Z" name="checkRegister" finished-at="2023-02-02T03:03:14Z" duration-ms="617" status="PASS">
+        <test-method signature="checkRegister()[pri:0, instance:com.dvops.maven.eclipse.NewTest@6cc558c6]" started-at="2023-02-02T18:02:11Z" name="checkRegister" finished-at="2023-02-02T18:02:12Z" duration-ms="704" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkRegister -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.dvops.maven.eclipse.NewTest@5c44c582]" started-at="2023-02-02T03:03:14Z" name="afterTest" finished-at="2023-02-02T03:03:14Z" duration-ms="121" status="PASS">
+        <test-method signature="checkUser()[pri:0, instance:com.dvops.maven.eclipse.NewTest@6cc558c6]" started-at="2023-02-02T18:02:12Z" name="checkUser" finished-at="2023-02-02T18:02:12Z" duration-ms="556" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkUser -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.dvops.maven.eclipse.NewTest@6cc558c6]" started-at="2023-02-02T18:02:12Z" name="afterTest" finished-at="2023-02-02T18:02:12Z" duration-ms="133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
