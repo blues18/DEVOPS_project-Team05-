@@ -24,23 +24,20 @@
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-	<junit-jupiter.groupId>org.junit.jupiter</junit-jupiter.groupId>
-    <junit-jupiter.artifactId>junit-jupiter</junit-jupiter.artifactId>
-    <junit-jupiter.version>5.7.0</junit-jupiter.version>
 </properties>
 
   <dependencies>
     <dependency>
-  <groupId>${selenium.groupId}</groupId>
-  <artifactId>${selenium.artifactId}</artifactId>
-  <version>${selenium.version}</version>
+	  <groupId>${selenium.groupId}</groupId>
+	  <artifactId>${selenium.artifactId}</artifactId>
+	  <version>${selenium.version}</version>
   </dependency>
-  <dependency>
-  <groupId>${testng.groupId}</groupId>
-  <artifactId>${testng.artifactId}</artifactId>
-  <version>${testng.version}</version>
-  <scope>test</scope>
-  </dependency>
+	 <dependency>
+	  <groupId>${testng.groupId}</groupId>
+	  	<artifactId>${testng.artifactId}</artifactId>
+	  	<version>${testng.version}</version>
+	  <scope>test</scope>
+	</dependency>
 	<dependency>
 	    <groupId>${junit-jupiter.groupId}</groupId>
 	    <artifactId>${junit-jupiter.artifactId}</artifactId>
