@@ -8,6 +8,14 @@
   <description>POM </description>
   
   <properties>
+  	<jacoco.groupId>org.jacoco</jacoco.groupId>
+  	<jacoco.artifactId>jacoco-maven-plugin</jacoco.artifactId>
+  	<jacoco.version>0.8.8</jacoco.version>
+  	
+  	<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+  	<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+  	<sonar.language>java</sonar.language>
+  
     <selenium.groupId>org.seleniumhq.selenium</selenium.groupId>
     <selenium.artifactId>selenium-java</selenium.artifactId>
     <selenium.version>4.5.0</selenium.version>
@@ -53,6 +61,7 @@
 	    <groupId>${junit-jupiter.groupId}</groupId>
 	    <artifactId>${junit-jupiter.artifactId}</artifactId>
 	    <version>5.7.0</version>
+	    <scope>test</scope>
 	</dependency>
    
  	<dependency>
@@ -81,6 +90,15 @@
 
   <build>
     <plugins>
+    <plugin>
+    <groupId>${jacoco.groupId}</groupId>
+    <artifactId>${jacoco.artifactId}</artifactId>
+    <version>${jacoco.version}</version>
+    <executions>
+    <execution><id>prepare-agent</id><goals><goal>prepare-agent</goal></goals></execution>
+    <execution><id>report</id><phase>verify</phase><goals><goal>report</goal></goals></execution>
+    </executions>
+    </plugin>
     <plugin>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>2.22.1</version>
