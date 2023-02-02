@@ -1,0 +1,62 @@
+pipeline {
+    agent any
+    tools{
+        maven 'Maven 3.8.6'
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                bat label: 'Building Project', script: '''
+                    @echo 
+                    echo 'Building...'
+                    mvn package -Dmaven.test.skip=true
+                '''
+            }
+            post{
+                always{
+                    echo 'Build Completed'
+                }
+                failure{
+                    echo 'Build Failed'
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                bat 'mvn test'
+            }
+            post{
+                always{
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                }
+                success{
+                    echo 'Test Passed'
+                }
+                failure{
+                    echo 'Test Failed'
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                deploy adapters: [tomcat9(credentialsId: '9d6250b0-2a22-4433-ae1d-8c71234f0a4a', path: '', url: 'http://localhost:8090/')], contextPath: 'DevOps_project', onFailure: false, war: '**/*.war' 
+                }
+            post{
+                always{
+                    echo 'Deploy Completed'
+                }
+                success{
+                    echo 'Deploy Success'
+                }
+                failure{
+                    echo 'Deploy Failed'
+                }
+            }
+        }
+    }
+}
