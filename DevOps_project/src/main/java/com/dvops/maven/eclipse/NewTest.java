@@ -51,19 +51,19 @@ public class NewTest {
 
 
 @BeforeTest
-public void beforeTest() {
-	  //Setting system properties of ChromeDriver
-	  //to amend directory path based on your local file path
-	  String chromeDriverDir = "C:\\Program Files\\Google\\Chrome\\chromedriver.exe";
-	  System.setProperty("webdriver.chrome.driver", chromeDriverDir);
-
-	  //initialize ChromeDriver at the start of test
-	  webDriver = new ChromeDriver();  
-}
+	public void beforeTest() {
+		  //Setting system properties of ChromeDriver
+		  //to amend directory path based on your local file path
+		  String chromeDriverDir = "C:\\Program Files\\Google\\Chrome\\chromedriver.exe";
+		  System.setProperty("webdriver.chrome.driver", chromeDriverDir);
+	
+		  //initialize ChromeDriver at the start of test
+		  webDriver = new ChromeDriver();  
+	}
 
 @AfterTest
-public void afterTest() {
-  webDriver.quit();
-}
+	public void afterTest() {
+	  webDriver.quit();
+	}
 
 }
