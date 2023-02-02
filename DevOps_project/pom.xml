@@ -10,7 +10,7 @@
   <properties>
     <selenium.groupId>org.seleniumhq.selenium</selenium.groupId>
     <selenium.artifactId>selenium-java</selenium.artifactId>
-    <selenium.version>2.53.1</selenium.version>
+    <selenium.version>4.5.0</selenium.version>
     
     <testng.groupId>org.testng</testng.groupId>
     <testng.artifactId>testng</testng.artifactId>
@@ -38,6 +38,7 @@
   <groupId>${testng.groupId}</groupId>
   <artifactId>${testng.artifactId}</artifactId>
   <version>${testng.version}</version>
+  <scope>test</scope>
   </dependency>
 	<dependency>
 	    <groupId>${junit-jupiter.groupId}</groupId>
