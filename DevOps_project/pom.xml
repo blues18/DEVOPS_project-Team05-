@@ -8,13 +8,13 @@
   <description>POM </description>
   
   <properties>
-  	<jacoco.groupId>org.jacoco</jacoco.groupId>
-  	<jacoco.artifactId>jacoco-maven-plugin</jacoco.artifactId>
-  	<jacoco.version>0.8.8</jacoco.version>
-  	
-  	<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-  	<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-  	<sonar.language>java</sonar.language>
+		<jacoco.groupId>org.jacoco</jacoco.groupId>
+        <jacoco.artifactId>jacoco-maven-plugin</jacoco.artifactId>
+        <jacoco.version>0.8.7</jacoco.version>
+
+        <sonar.java.coveragePlugin>org.jacoco</sonar.java.coveragePlugin>
+        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+        <sonar.language>java</sonar.language>
   
     <selenium.groupId>org.seleniumhq.selenium</selenium.groupId>
     <selenium.artifactId>selenium-java</selenium.artifactId>
@@ -37,8 +37,7 @@
 </properties>
 
   
-  <dependencies>
-  
+  <dependencies>            
 	  <dependency>
 	  <groupId>org.mockito</groupId>
 	  <artifactId>mockito-core</artifactId>

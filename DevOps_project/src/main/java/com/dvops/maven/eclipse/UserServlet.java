@@ -29,7 +29,7 @@ public class UserServlet extends HttpServlet {
 	private String jdbcPassword = "Ezeikel888=";
 
 	private static final String INSERT_USERS_SQL = "INSERT INTO userdetails" + " (username, password, email, races) VALUES " + " (?, ?, ?);";
-	private static final String SELECT_USER_BY_ID = "select username,password,email,races from userdetails where username =?";
+	static final String SELECT_USER_BY_ID = "select username,password,email,races from userdetails where username =?";
 	private static final String SELECT_ALL_USERS = "select * from userdetails ";
 	private static final String DELETE_USERS_SQL = "delete from UserDetails_Storage where username = ?;";
 	private static final String UPDATE_USERS_SQL = "update UserDetails_Storage set username = ?,password= ?,email =?,races =? where username = ?;";
@@ -47,7 +47,7 @@ public class UserServlet extends HttpServlet {
 		return connection;
 	}
 
-	private void listUsers(HttpServletRequest request, HttpServletResponse response)
+	void listUsers(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
 		List<User> users = new ArrayList<>();
 		try (Connection connection = getConnection();
@@ -108,7 +108,7 @@ public class UserServlet extends HttpServlet {
 	}
 
 
-	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
+	void showEditForm(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
 
 		String username = request.getParameter("username");
@@ -137,7 +137,7 @@ public class UserServlet extends HttpServlet {
 	}
 
 	// method to update the user table base on the form data
-	private void updateUser(HttpServletRequest request, HttpServletResponse response)
+	void updateUser(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, IOException {
 	//Step 1: Retrieve value from the request
 	String oriName = request.getParameter("oriName");
@@ -164,7 +164,7 @@ public class UserServlet extends HttpServlet {
 	}
 
 
-	private void deleteUser(HttpServletRequest request, HttpServletResponse response)
+	void deleteUser(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, IOException {
 
 	 String username = request.getParameter("username");
