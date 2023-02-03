@@ -36,9 +36,7 @@ class RegisterTest {
 	@Test
 	void testDoPostHttpServletRequestHttpServletResponse() {
 		
-	
-		
-		
+
 		
 		
 		List<user> testSc = sc.getUser();
