@@ -37,6 +37,13 @@ public class NewTest {
 	      WebElement card = webDriver.findElement(By.className("card"));
 	      AssertJUnit.assertTrue(card.isDisplayed());
 	  }
+	@Test
+	public void checkProductID() {
+	      webDriver.navigate().to("http://localhost:8090/DevOps_project/ProductServlet/get_name?product_name=Razer%20Naga%20Pro%20HYPERSPEED");
+	      WebElement card = webDriver.findElement(By.className("card"));
+	      AssertJUnit.assertTrue(card.isDisplayed());
+	  }
+	
 	  
 	  @Test
 	  public void checkRegister() {
