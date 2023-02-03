@@ -40,6 +40,7 @@ class RegisterTest {
 		
 		
 		
+		
 		List<user> testSc = sc.getUser();
 		assertEquals(testSc.size(), USER_COLLECTION_SIZE);
 		sc.addUser(s1);
