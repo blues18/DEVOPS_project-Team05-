@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-class testproduct {
+class ProductTest {
 	@Test
     void testProductArrayObject() {
         product_array_object obj = new product_array_object();
