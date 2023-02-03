@@ -23,6 +23,7 @@ public class UserServlet extends HttpServlet {
 		super();
 	}
 
+	
 	private String jdbcURL = "jdbc:mysql://localhost:3306/userdetails_storage";
 	private String jdbcUsername = "root";
 	private String jdbcPassword = "Ezeikel888=";
@@ -51,7 +52,7 @@ public class UserServlet extends HttpServlet {
 
 	private void listUsers(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
-		List<user> users = new ArrayList<>();
+		List<User> users = new ArrayList<>();
 		try (Connection connection = getConnection();
 
 				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
@@ -63,7 +64,7 @@ public class UserServlet extends HttpServlet {
 				String password = rs.getString("password");
 				String email = rs.getString("email");
 				String races = rs.getString("races");
-				users.add(new user(username, password, email, races));
+				users.add(new User(username, password, email, races));
 
 			}
 		} catch (SQLException e) {
@@ -112,7 +113,7 @@ public class UserServlet extends HttpServlet {
 			throws SQLException, ServletException, IOException {
 
 		String username = request.getParameter("username");
-		user existingUser = new user("", "", "", "");
+		User existingUser = new User("", "", "", "");
 
 		try (Connection connection = getConnection();
 
@@ -126,7 +127,7 @@ public class UserServlet extends HttpServlet {
 				String password = rs.getString("password");
 				String email = rs.getString("email");
 				String races = rs.getString("races");
-				existingUser = new user(username, password, email, races);
+				existingUser = new User(username, password, email, races);
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
