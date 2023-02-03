@@ -16,7 +16,7 @@ public class NewTest {
 
 @Test
  	public void checkLogin() {
-	webDriver.navigate().to("http://localhost:8090/DevOps_project/login.jsp");
+	webDriver.navigate().to("http://localhost:8080/DevOps_project/login.jsp");
 	webDriver.findElement(By.name("userName")).sendKeys("testuser");
 	webDriver.findElement(By.name("passWord")).sendKeys("testpassword");
 	WebElement button = webDriver.findElement(By.className("btn"));
@@ -28,21 +28,21 @@ public class NewTest {
 
 @Test
 	public void checkUser() {
-		webDriver.navigate().to("http://localhost:8090/DevOps_project/UserServlet/dashboard");
+		webDriver.navigate().to("http://localhost:8080/DevOps_project/UserServlet/dashboard");
 		WebElement table = webDriver.findElement(By.className("table"));
 		Assert.assertTrue(table.isDisplayed());
 	}
 
 @Test
   public void checkItem() {
-      webDriver.navigate().to("http://localhost:8090/DevOps_project/ProductServlet/listDisplay");
+      webDriver.navigate().to("http://localhost:8080/DevOps_project/ProductServlet/listDisplay");
       WebElement card = webDriver.findElement(By.className("card"));
       Assert.assertTrue(card.isDisplayed());
   }
   
   @Test
   public void checkRegister() {
-  	webDriver.navigate().to("http://localhost:8090/DevOps_project/register_page.jsp");
+  	webDriver.navigate().to("http://localhost:8080/DevOps_project/register_page.jsp");
   	webDriver.findElement(By.name("userName")).sendKeys("testuser");
   	webDriver.findElement(By.name("passWord")).sendKeys("testpassword");
   	webDriver.findElement(By.name("email")).sendKeys("testuser@example.com");
