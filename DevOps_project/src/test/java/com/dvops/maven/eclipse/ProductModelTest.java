@@ -15,6 +15,7 @@ class ProductModelTest {
 		model = new products_model("product_name", "product_type", "Product_Brand", 1, "Product_Description", 1);
 	}
 
+	
 	@AfterEach
 	void tearDown() {
 		model = null;

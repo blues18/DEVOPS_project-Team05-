@@ -25,4 +25,5 @@ class ProductArrayTest {
         assertEquals("MMO Wireless Gaming Mouse with Hyperscroll Pro wheel", Product.product[1].product_description);
         assertEquals(62, Product.product[1].product_stocks);
     }
+    
 }
