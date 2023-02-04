@@ -24,6 +24,7 @@ public class NewTest {
 	actions.contextClick(button).perform();;
   }
 
+
 @Test
 	public void checkUser() {
 		webDriver.navigate().to("http://localhost:8090/DevOps_project/UserServlet/dashboard");
