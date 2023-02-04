@@ -68,4 +68,10 @@ public class NewTest {
 		  //initialize ChromeDriver at the start of test
 		  webDriver = new ChromeDriver();  
 	}
+	
+	@AfterTest
+	  public void afterTest() {
+		  //Quit the ChromeDriver and close all associated window at the end of test
+		  webDriver.quit();			
+	  }
 }
