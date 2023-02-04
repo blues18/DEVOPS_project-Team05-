@@ -17,7 +17,7 @@ public class NewTest {
 
 	@Test
 	public void checkLogin() {
-		webDriver.navigate().to("http://localhost:8090/DevOps_project/login.jsp");
+		webDriver.navigate().to("http://localhost:8090/DevOps_project/loginServlet.jsp");
 		webDriver.findElement(By.name("userName")).sendKeys("Lancelot");
 		webDriver.findElement(By.name("passWord")).sendKeys("Fanny");
 		WebElement button = webDriver.findElement(By.className("btn"));
