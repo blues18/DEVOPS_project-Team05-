@@ -2,48 +2,48 @@
 <testng-results total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-03T16:12:26Z" name="Default suite" finished-at="2023-02-03T16:12:31Z" duration-ms="5035">
+  <suite started-at="2023-02-04T10:50:55Z" name="Default suite" finished-at="2023-02-04T10:51:00Z" duration-ms="5082">
     <groups>
     </groups>
-    <test started-at="2023-02-03T16:12:26Z" name="Default test" finished-at="2023-02-03T16:12:31Z" duration-ms="5035">
+    <test started-at="2023-02-04T10:50:55Z" name="Default test" finished-at="2023-02-04T10:51:00Z" duration-ms="5082">
       <class name="com.dvops.maven.eclipse.NewTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.dvops.maven.eclipse.NewTest@65a15628]" started-at="2023-02-04T00:12:26Z" name="beforeTest" finished-at="2023-02-04T00:12:27Z" duration-ms="914" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.dvops.maven.eclipse.NewTest@65a15628]" started-at="2023-02-04T18:50:55Z" name="beforeTest" finished-at="2023-02-04T18:50:56Z" duration-ms="1356" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="checkItem()[pri:0, instance:com.dvops.maven.eclipse.NewTest@65a15628]" started-at="2023-02-04T00:12:27Z" name="checkItem" finished-at="2023-02-04T00:12:29Z" duration-ms="2384" status="PASS">
+        <test-method signature="checkItem()[pri:0, instance:com.dvops.maven.eclipse.NewTest@65a15628]" started-at="2023-02-04T18:50:56Z" name="checkItem" finished-at="2023-02-04T18:50:58Z" duration-ms="1949" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkItem -->
-        <test-method signature="checkLogin()[pri:0, instance:com.dvops.maven.eclipse.NewTest@65a15628]" started-at="2023-02-04T00:12:29Z" name="checkLogin" finished-at="2023-02-04T00:12:30Z" duration-ms="669" status="PASS">
+        <test-method signature="checkLogin()[pri:0, instance:com.dvops.maven.eclipse.NewTest@65a15628]" started-at="2023-02-04T18:50:58Z" name="checkLogin" finished-at="2023-02-04T18:50:59Z" duration-ms="650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLogin -->
-        <test-method signature="checkRegister()[pri:0, instance:com.dvops.maven.eclipse.NewTest@65a15628]" started-at="2023-02-04T00:12:30Z" name="checkRegister" finished-at="2023-02-04T00:12:31Z" duration-ms="790" status="PASS">
+        <test-method signature="checkRegister()[pri:0, instance:com.dvops.maven.eclipse.NewTest@65a15628]" started-at="2023-02-04T18:50:59Z" name="checkRegister" finished-at="2023-02-04T18:51:00Z" duration-ms="841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkRegister -->
-        <test-method signature="checkUser()[pri:0, instance:com.dvops.maven.eclipse.NewTest@65a15628]" started-at="2023-02-04T00:12:31Z" name="checkUser" finished-at="2023-02-04T00:12:31Z" duration-ms="136" status="PASS">
+        <test-method signature="checkUser()[pri:0, instance:com.dvops.maven.eclipse.NewTest@65a15628]" started-at="2023-02-04T18:51:00Z" name="checkUser" finished-at="2023-02-04T18:51:00Z" duration-ms="131" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkUser -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.dvops.maven.eclipse.NewTest@65a15628]" started-at="2023-02-04T00:12:31Z" name="afterTest" finished-at="2023-02-04T00:12:31Z" duration-ms="0" status="FAIL">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.dvops.maven.eclipse.NewTest@65a15628]" started-at="2023-02-04T18:51:00Z" name="afterTest" finished-at="2023-02-04T18:51:00Z" duration-ms="0" status="FAIL">
           <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
             <message>
               <![CDATA[Error communicating with the remote browser. It may have died.
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'MSI', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
 Driver info: driver.version: RemoteWebDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:51941}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\Ryan14\AppData\Local\Temp\scoped_dir17148_534474688}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=109.0.5414.120, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: a11c39f8b6a7848757f8736ff07d7031]]>
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:60279}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\Ryan14\AppData\Local\Temp\scoped_dir19788_1799054057}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=109.0.5414.120, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: 110be77dbf5f5893adad5401b07f22fe]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'MSI', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
 Driver info: driver.version: RemoteWebDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:51941}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\Ryan14\AppData\Local\Temp\scoped_dir17148_534474688}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=109.0.5414.120, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
-Session ID: a11c39f8b6a7848757f8736ff07d7031
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:60279}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, webauthn:extension:largeBlob=true, unexpectedAlertBehaviour=ignore, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\Ryan14\AppData\Local\Temp\scoped_dir19788_1799054057}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=109.0.5414.120, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true, webauthn:virtualAuthenticators=true}]
+Session ID: 110be77dbf5f5893adad5401b07f22fe
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
 	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:526)
