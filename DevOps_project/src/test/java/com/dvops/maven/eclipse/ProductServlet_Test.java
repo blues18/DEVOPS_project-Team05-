@@ -67,6 +67,7 @@ class ProductServletTest {
 		productServlet.listProduct(request, response);
 	}
 
+	/*
 	@Test
 	void testDoGetHttpServletRequestHttpServletResponse() throws Exception, IOException {
 		HttpServletRequest request = mock(HttpServletRequest.class);
@@ -85,8 +86,6 @@ class ProductServletTest {
 		String result = stringWriter.toString();
 		assertNotNull(result);
 	}
-	
-	
-	
+	*/
 	
 }

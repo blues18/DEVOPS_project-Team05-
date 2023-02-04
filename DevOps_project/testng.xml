@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="NGTest">
     <classes>
-      <class name="com.dvops.maven.eclipse.NewTest"/>
+      <class name="com.dvops.maven.eclipse.ngTest.NewTest"/>
     </classes>
   </test> <!-- NGTest -->
 </suite> <!-- Suite -->

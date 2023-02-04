@@ -1,4 +1,4 @@
-package com.dvops.maven.eclipse;
+package com.dvops.maven.eclipse.ngTest;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.openqa.selenium.By;

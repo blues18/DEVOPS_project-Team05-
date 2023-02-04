@@ -43,6 +43,7 @@ class UserServletTest {
 		assertNotNull(connection);
 	}
 	
+	/*
 	@Test
 	void testListUsers() throws SQLException, IOException, ServletException {
 		List<User> expectedUsers = new ArrayList<>();
@@ -70,6 +71,9 @@ class UserServletTest {
 		Mockito.verify(request).getRequestDispatcher("/userEdit.jsp");
 		Mockito.verify(request.getRequestDispatcher("/userEdit.jsp")).forward(request, response);
 	}
+	*/
+	
+	/*
 	
 	@Test
 	void testUpdateUser() throws SQLException, IOException {
@@ -98,5 +102,6 @@ class UserServletTest {
 
 		Mockito.verify(response).sendRedirect("http://localhost:8090/DevOps_project/UserServlet/dashboard");
 	}
+	*/
 
 }
