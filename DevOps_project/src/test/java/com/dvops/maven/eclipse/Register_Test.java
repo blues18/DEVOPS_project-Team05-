@@ -24,7 +24,7 @@ class RegisterServletTest {
         when(response.getWriter()).thenReturn(writer);
     }
     
-    /*
+    
     @Test
     void testDoPost() throws ServletException, IOException {
         registerServlet servlet = new registerServlet();
@@ -41,6 +41,6 @@ class RegisterServletTest {
         verify(writer).println("<h1>" +" successfully registered an account!" + "</h1>");
         verify(writer).close();
     }
-    */
+    
     
 }
