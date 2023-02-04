@@ -25,10 +25,24 @@ public class ProductServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public ProductServlet() {
+	public ProductServlet(String product_name, String product_type, String product_brand, String product_price,
+			String product_description, String product_stocks) {
 		super();
 		// TODO Auto-generated constructor stub
+		this.product_name = product_name;
+		this.product_type = product_type;
+		this.product_brand = product_brand;
+		this.product_price = product_price;
+		this.product_description = product_description;
+		this.product_stocks = product_stocks;
 	}
+
+	protected String product_name;
+	protected String product_type;
+	protected String product_brand;
+	protected String product_price;
+	protected String product_description;
+	protected String product_stocks;
 
 	// database connections
 
@@ -97,10 +111,10 @@ public class ProductServlet extends HttpServlet {
 				String product_name = rs.getString("product_name");
 				String product_type = rs.getString("product_type");
 				String product_brand = rs.getString("product_brand");
-				int product_price = rs.getInt("product_price");
+				String product_price = rs.getString("product_price");
 				String product_description = rs.getString("product_description");
-				int product_stocks = rs.getInt("product_stocks");
-				//String product_images = rs.getString("product_images");
+				String product_stocks = rs.getString("product_stocks");
+				// String product_images = rs.getString("product_images");
 				products.add(new products_model(product_name, product_type, product_brand, product_price,
 						product_description, product_stocks));
 				System.out.println("adding to list");
@@ -120,7 +134,7 @@ public class ProductServlet extends HttpServlet {
 			throws SQLException, ServletException, IOException {
 		// get parameter passed in the URL
 		String product_name = request.getParameter("product_name");
-		products_model existingProducts = new products_model("", "", "", 0, "", 0);
+		products_model existingProducts = new products_model("", "", "", "", "", "");
 		// Step 1: Establishing a Connection
 		try (Connection connection = getConnection();
 				// Step 2:Create a statement using connection object
@@ -133,10 +147,10 @@ public class ProductServlet extends HttpServlet {
 				product_name = rs.getString("product_name");
 				String product_type = rs.getString("product_type");
 				String product_brand = rs.getString("product_brand");
-				int product_price = rs.getInt("product_price");
+				String product_price = rs.getString("product_price");
 				String product_description = rs.getString("product_description");
-				int product_stocks = rs.getInt("product_stocks");
-				//String product_images = rs.getString("product_images");
+				String product_stocks = rs.getString("product_stocks");
+				// String product_images = rs.getString("product_images");
 				existingProducts = new products_model(product_name, product_type, product_brand, product_price,
 						product_description, product_stocks);
 			}

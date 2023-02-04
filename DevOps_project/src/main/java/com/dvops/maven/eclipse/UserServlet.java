@@ -21,13 +21,30 @@ public class UserServlet extends HttpServlet {
 
 	public UserServlet() {
 		super();
+		// TODO Auto-generated constructor stub
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.races = races;
+
+		this.username = "1";
+		this.password = "1";
+		this.email = "1";
+		this.races = "1";
+
 	}
+
+	protected String username;
+	protected String password;
+	protected String email;
+	protected String races;
 
 	private String jdbcURL = "jdbc:mysql://localhost:3306/userdetails_storage";
 	private String jdbcUsername = "root";
 	private String jdbcPassword = "Ezeikel888=";
 
-	private static final String INSERT_USERS_SQL = "INSERT INTO userdetails" + " (username, password, email, races) VALUES " + " (?, ?, ?);";
+	private static final String INSERT_USERS_SQL = "INSERT INTO userdetails"
+			+ " (username, password, email, races) VALUES " + " (?, ?, ?);";
 	private static final String SELECT_USER_BY_ID = "select username,password,email,races from userdetails where username =?";
 	private static final String SELECT_ALL_USERS = "select * from userdetails ";
 	private static final String DELETE_USERS_SQL = "delete from UserDetails_Storage where username = ?;";
@@ -104,7 +121,6 @@ public class UserServlet extends HttpServlet {
 		doGet(request, response);
 	}
 
-
 	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
 
@@ -134,45 +150,41 @@ public class UserServlet extends HttpServlet {
 	}
 
 	// method to update the user table base on the form data
-	private void updateUser(HttpServletRequest request, HttpServletResponse response)
-	throws SQLException, IOException {
-	//Step 1: Retrieve value from the request
-	String oriName = request.getParameter("oriName");
-	 String username = request.getParameter("username");
-	 String password = request.getParameter("password");
-	 String email = request.getParameter("email");
-	 String races = request.getParameter("races");
-	 System.out.println(username);
-	 System.out.println(oriName);
+	private void updateUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
+		// Step 1: Retrieve value from the request
+		String oriName = request.getParameter("oriName");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String email = request.getParameter("email");
+		String races = request.getParameter("races");
+		System.out.println(username);
+		System.out.println(oriName);
 
-	 
-	 //Step 2: Attempt connection with database and execute update user SQL query
-	 try (Connection connection = getConnection(); PreparedStatement statement = 
-	connection.prepareStatement(UPDATE_USERS_SQL);) {
-	 statement.setString(1, username);
-	 statement.setString(2, password);
-	 statement.setString(3, email);
-	 statement.setString(4, races);
-	 statement.setString(5, oriName);
-	 int i = statement.executeUpdate();
-	 }
+		// Step 2: Attempt connection with database and execute update user SQL query
+		try (Connection connection = getConnection();
+				PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);) {
+			statement.setString(1, username);
+			statement.setString(2, password);
+			statement.setString(3, email);
+			statement.setString(4, races);
+			statement.setString(5, oriName);
+			int i = statement.executeUpdate();
+		}
 
-	 response.sendRedirect("http://localhost:8080/DevOps_project/UserServlet/dashboard");
+		response.sendRedirect("http://localhost:8080/DevOps_project/UserServlet/dashboard");
 	}
 
+	private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
 
-	private void deleteUser(HttpServletRequest request, HttpServletResponse response)
-	throws SQLException, IOException {
+		String username = request.getParameter("username");
 
-	 String username = request.getParameter("username");
-
-	 try (Connection connection = getConnection(); PreparedStatement statement = 
-	connection.prepareStatement(DELETE_USERS_SQL);) {
-	 statement.setString(1, username);
-	 System.out.println(username);
-	 int i = statement.executeUpdate();
-	 }
-	 response.sendRedirect("http://localhost:8080/DevOps_project/UserServlet/dashboard");
+		try (Connection connection = getConnection();
+				PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
+			statement.setString(1, username);
+			System.out.println(username);
+			int i = statement.executeUpdate();
+		}
+		response.sendRedirect("http://localhost:8080/DevOps_project/UserServlet/dashboard");
 	}
 
 }
