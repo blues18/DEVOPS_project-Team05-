@@ -84,8 +84,7 @@ public class ProductServlet extends HttpServlet {
 
 	}
 
-	
-	private void listProduct(HttpServletRequest request, HttpServletResponse response)
+	void listProduct(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
 		List<products_model> products = new ArrayList<>();
 		try (Connection connection = getConnection();
@@ -113,12 +112,11 @@ public class ProductServlet extends HttpServlet {
 
 		request.setAttribute("listProduct", products);
 		request.getRequestDispatcher("/viewAllproduct.jsp").forward(request, response);
-
 	}
 
 	// method to get parameter, query database for existing user data and redirect
 	// to user edit page
-	private void showProductDetail(HttpServletRequest request, HttpServletResponse response)
+	void showProductDetail(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
 		// get parameter passed in the URL
 		String product_name = request.getParameter("product_name");

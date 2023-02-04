@@ -9,18 +9,20 @@ import org.junit.jupiter.api.Test;
 class UserTest {
 	
 
-	private User user;
-
+	public User user;
+	
 	@BeforeEach
 	void setUp() throws Exception {
 		 user = new User ("User1", "pass","rjy@gmail","malay");
 	}
 
+	
 
 	@AfterEach
 	void tearDown() throws Exception {
 	}
 
+	
 	@Test
 	void testGetUsername() {
 		assertEquals("User1", user.getUsername());
