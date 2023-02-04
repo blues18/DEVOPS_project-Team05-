@@ -2,12 +2,12 @@ package com.dvops.maven.eclipse;
 
 public class products_model {
 	
-	protected String product_name;
-	protected String product_type;
-	protected String product_brand;
-	protected int product_price;
-	protected String product_description;
-	protected int product_stocks;
+	public String product_name;
+	public String product_type;
+	public String product_brand;
+	public int product_price;
+	public String product_description;
+	public int product_stocks;
 	//protected String product_images;
 	
 	public products_model(String product_name, String product_type, String product_brand, int product_price, 

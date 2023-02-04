@@ -123,10 +123,10 @@
            <configuration>
            <suiteXmlFiles>
 	          	<suiteXmlFile>testng.xml</suiteXmlFile>
+	          	<suiteXmlFile>testng_usermodel.xml</suiteXmlFile>
+	          	<suiteXmlFile>testng_ProductModel.xml</suiteXmlFile>
+	          	<suiteXmlFile>testng_ProductMock.xml</suiteXmlFile>
 	          </suiteXmlFiles>
-	         <includes>
-				<include>**/*Test*.java</include>
-		      </includes>
           </configuration>
         </plugin>
     </plugins>
