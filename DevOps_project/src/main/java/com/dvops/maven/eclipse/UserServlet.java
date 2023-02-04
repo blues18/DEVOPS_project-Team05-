@@ -46,7 +46,7 @@ public class UserServlet extends HttpServlet {
 		return connection;
 	}
 
-	private void listUsers(HttpServletRequest request, HttpServletResponse response)
+	public void listUsers(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
 		List<User> users = new ArrayList<>();
 		try (Connection connection = getConnection();
@@ -105,7 +105,7 @@ public class UserServlet extends HttpServlet {
 	}
 
 
-	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
+	public void showEditForm(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
 
 		String username = request.getParameter("username");
@@ -134,7 +134,7 @@ public class UserServlet extends HttpServlet {
 	}
 
 	// method to update the user table base on the form data
-	private void updateUser(HttpServletRequest request, HttpServletResponse response)
+	public void updateUser(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, IOException {
 	//Step 1: Retrieve value from the request
 	String oriName = request.getParameter("oriName");
@@ -161,7 +161,7 @@ public class UserServlet extends HttpServlet {
 	}
 
 
-	private void deleteUser(HttpServletRequest request, HttpServletResponse response)
+	public void deleteUser(HttpServletRequest request, HttpServletResponse response)
 	throws SQLException, IOException {
 
 	 String username = request.getParameter("username");
