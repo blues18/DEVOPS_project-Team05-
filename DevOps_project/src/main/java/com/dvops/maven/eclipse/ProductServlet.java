@@ -25,24 +25,10 @@ public class ProductServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public ProductServlet(String product_name, String product_type, String product_brand, String product_price,
-			String product_description, String product_stocks) {
+	public ProductServlet() {
 		super();
 		// TODO Auto-generated constructor stub
-		this.product_name = product_name;
-		this.product_type = product_type;
-		this.product_brand = product_brand;
-		this.product_price = product_price;
-		this.product_description = product_description;
-		this.product_stocks = product_stocks;
 	}
-
-	protected String product_name;
-	protected String product_type;
-	protected String product_brand;
-	protected String product_price;
-	protected String product_description;
-	protected String product_stocks;
 
 	// database connections
 
