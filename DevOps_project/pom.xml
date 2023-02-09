@@ -15,7 +15,7 @@
         <sonar.java.coveragePlugin>org.jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
         <sonar.language>java</sonar.language>
-  
+   
     <selenium.groupId>org.seleniumhq.selenium</selenium.groupId>
     <selenium.artifactId>selenium-java</selenium.artifactId>
     <selenium.version>4.5.0</selenium.version>
@@ -37,7 +37,7 @@
 </properties>
 
   
-  <dependencies>   
+  <dependencies>            
 	  <dependency>
 	  <groupId>org.mockito</groupId>
 	  <artifactId>mockito-core</artifactId>
