@@ -49,7 +49,7 @@ class ProductServletTest {
         response = mock(HttpServletResponse.class);
         requestDispatcher = mock(RequestDispatcher.class);
 
-        when(request.getParameter("product_name")).thenReturn("product2");
+        when(request.getParameter("product_name")).thenReturn("product1");
         when(request.getRequestDispatcher("/productDetail_page.jsp")).thenReturn(requestDispatcher);
 
         productServlet.showProductDetail(request, response);
